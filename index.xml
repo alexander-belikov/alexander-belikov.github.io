@@ -33,13 +33,120 @@
     </item>
     
     <item>
-      <title>2021 Wos Arango Sql</title>
+      <title>Web of Science in a graph database setting</title>
       <link>https://alexander-belikov.github.io/post/2021-wos-arango-sql/</link>
-      <pubDate>Sat, 04 Sep 2021 20:36:33 +0200</pubDate>
+      <pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate>
       <guid>https://alexander-belikov.github.io/post/2021-wos-arango-sql/</guid>
       <description>&lt;h3 id=&#34;start&#34;&gt;Start&lt;/h3&gt;
 &lt;h3 id=&#34;start-1&#34;&gt;Start&lt;/h3&gt;
+&lt;p&gt;We live in an era of accelerating data generation. The sizes of datasets keep growing and so does their structure. Despite the continuously growing capacity of computers real-world datasets surpass the limits of in-memory processing of even larger commercially available computers, and so data manipulation and analysis has to be aided by the use of databases. Across multiple domains, notably sociology, most interesting phenomena tend to have graph structure rather than tabular structure.
+Graph databases, compared to their more established SQL counterparts offer multiple advantages, due to a more natural representation of the data. Instead of tables, where each row contains a record with potentially empty fields, in graph databases, entities are vertices and the relations between them are represented by edges. A well-known join operation is mathematically represented as a reaching second order neighbours.&lt;/p&gt;
+&lt;p&gt;We ran a practical comprehensive comparison of MySQL and ArangoDB databases on a subset of the Web of Science Database.
+We designed and benchmarked sample queries, some of which specifically aimed to highlight the graph-like structure of the dataset. We evaluate the databases from of view the learning curve, ease-of-setup, robustness and language expressiveness.&lt;/p&gt;
+&lt;h3 id=&#34;sample-dataset&#34;&gt;Sample Dataset&lt;/h3&gt;
+&lt;p&gt;Web of Science (WOS) is one of the most complete academic datasets produced by Clarivate Analytics (previously by Thomson Reuters). As of 2017 it covered 12K high impact journals and 160K conference proceedings. It contains publication records including authors, affiliations, references, abstracts etc.
+For our test we took a subset of available records published later or in 1971 and not later or in 1980.
+To properly highlight the case for graph applications for each record we retrieved and cast the WOS dataset as csv-files:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;publications (publication metadata, contains journal information)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;institutions (affiliation data)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;contributors (author data)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;refs (references data)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;As a results we ended up with 5.87M unique publications, 12.3M rows in contributors, 68.7M rows in refs, 163K rows in institutions  (affiliation data coverage seems to be incomplete).&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;mysql-setting&#34;&gt;MySQL setting&lt;/h3&gt;
+&lt;p&gt;CSV files were directly loaded into MySQL database and corresponding indices were created.
+MySQL was set up on a desktop with 64Gb of RAM.&lt;/p&gt;
+&lt;h3 id=&#34;arangodb-setting&#34;&gt;ArangoDB setting&lt;/h3&gt;
+&lt;p&gt;We used ArangoDB version 3.4, hosted on an Ubuntu 16.04 with 16Gb of ram.
+For arangodb each type of csv file (blue) was projected on one or more arango vertex collections (green).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./figs/wos_csv_source2vc.png&#34; alt=&#34;source2vc&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Vertex collections contained the following fields (purple, with indices in boxed fields).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./figs/wos_csv_vc2fields.png&#34; alt=&#34;source2vc&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Edges were created between vertex collections.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;./figs/wos_csv_vc2vc.png&#34; &gt;
+
+
+  &lt;img src=&#34;./figs/wos_csv_vc2vc.png&#34; alt=&#34;&#34;  height=&#34;20&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Please note the edges connecting publication collection to itself, representing references.&lt;/p&gt;
+&lt;p&gt;The ingestion was set up using pyarango package and arango query language aql.
+At the time of benchmarking pyarango did not implement all the arango functions, so we found it most reasonable to simply execute aql queries as strings.&lt;/p&gt;
+&lt;p&gt;De-duplication of existing documents (documents are considered identical if defining fields, which were also indexed upon, are the same, grey boxes in the figure above) was part of the ingestion process (see upsert).
+The ingestion process took approximately 23 hours.&lt;/p&gt;
+&lt;h3 id=&#34;queries&#34;&gt;Queries&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;return the most popular journals by number of publications for 1978.&lt;/li&gt;
+&lt;li&gt;return 1000 most popular words (minus stop words) from all available titles.&lt;/li&gt;
+&lt;li&gt;return the authors who changed their country more than twice.&lt;/li&gt;
+&lt;li&gt;for publication p compute the ratio of number of second order neighbors to first order neighbors in the directed network of citations.&lt;/li&gt;
+&lt;li&gt;count the number of times publications from journal j published in 1978 cite publications in journal j’ published in period [1973, 1978).&lt;/li&gt;
+&lt;li&gt;given a subset of publications, compute the cardinality of the power set defined as papers cited by p, papers that are cited by papers cited by p etc of order 5. As the subset of publications we take 100 publication from query 4 with the highest ratio.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In the Figure below we plot query times as a function of the size of the restricting subset, where applicable. Red, solid lines correspond to arangodb, blue, dashed lines and star markers - to MySQL.&lt;/p&gt;
+&lt;p&gt;For Q1, the limit is on the number of journals.&lt;/p&gt;
+&lt;p&gt;For Q2 - on the number of publications.&lt;/p&gt;
+&lt;p&gt;For Q3 - on the number of contributors.&lt;/p&gt;
+&lt;p&gt;For Q4 - on the number of publications.&lt;/p&gt;
+&lt;p&gt;For Q5 - on both the number of journals which are citing and which are being cited, so the for limit size N, the result is an NxN matrix. We note that Q5 essentially represents Eigenfactor computation.&lt;/p&gt;
+&lt;p&gt;For Q6 - on the number of source publications.&lt;/p&gt;
+&lt;p&gt;Arango queries can be found &lt;a href=&#34;https://github.com/alexander-belikov/wos_db_studies/blob/master/run/queries.py&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;wos_db_studies/run/queries&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;SQL queries can be found
+&lt;a href=&#34;https://github.com/brendanchambers/wos_db_benchmark/tree/master/benchmarking&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;wos_db_benchmark/benchmarking&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;While our comparison between sql and graph databases is far from being comprehensive, we nonetheless are able to conclude that&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the learning curve of Arango is steeper than that of MySQL&lt;/li&gt;
+&lt;li&gt;ArangoDB is robust&lt;/li&gt;
+&lt;li&gt;AQL is expressive with respect to graph-specific queries&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;acknowledgements&#34;&gt;Acknowledgements&lt;/h3&gt;
+&lt;p&gt;Prepared with the help of Brendan Chambers.&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Creating training data for scientific named entity recognition with minimal human effort</title>
+      <link>https://alexander-belikov.github.io/publication/2019-creating/</link>
+      <pubDate>Sun, 07 Mar 2021 22:42:21 +0100</pubDate>
+      <guid>https://alexander-belikov.github.io/publication/2019-creating/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -47,14 +154,6 @@
       <link>https://alexander-belikov.github.io/publication/2020-detecting/</link>
       <pubDate>Sun, 07 Mar 2021 22:34:19 +0100</pubDate>
       <guid>https://alexander-belikov.github.io/publication/2020-detecting/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Creating training data for scientific named entity recognition with minimal human effort</title>
-      <link>https://alexander-belikov.github.io/publication/2019-creating/</link>
-      <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>https://alexander-belikov.github.io/publication/2019-creating/</guid>
       <description></description>
     </item>
     
