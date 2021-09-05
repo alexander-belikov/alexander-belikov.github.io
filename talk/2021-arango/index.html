@@ -34,10 +34,10 @@
   
     
   
-  <meta name="description" content="We live in an era of accelerating data generation. The sizes of datasets keep growing and so does their structure. Despite the continuously growing capacity of computers real-world datasets surpass the limits of in-memory processing of even larger commercially available computers, and so data manipulation and analysis has to be aided by the use of databases.">
+  <meta name="description" content="">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://alexander-belikov.github.io/post/2021-wos-arango-sql/">
+  <link rel="alternate" hreflang="en-us" href="https://alexander-belikov.github.io/talk/2021-arango/">
 
   
 
@@ -299,7 +299,7 @@
   <link rel="icon" type="image/png" href="/images/icon_huf49b158b2681d286a60137da38ca7574_154815_32x32_fill_lanczos_center_3.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_huf49b158b2681d286a60137da38ca7574_154815_192x192_fill_lanczos_center_3.png">
 
-  <link rel="canonical" href="https://alexander-belikov.github.io/post/2021-wos-arango-sql/">
+  <link rel="canonical" href="https://alexander-belikov.github.io/talk/2021-arango/">
 
   
   
@@ -315,28 +315,23 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Academic">
-  <meta property="og:url" content="https://alexander-belikov.github.io/post/2021-wos-arango-sql/">
-  <meta property="og:title" content="Web of Science in a graph database setting | Academic">
-  <meta property="og:description" content="We live in an era of accelerating data generation. The sizes of datasets keep growing and so does their structure. Despite the continuously growing capacity of computers real-world datasets surpass the limits of in-memory processing of even larger commercially available computers, and so data manipulation and analysis has to be aided by the use of databases."><meta property="og:image" content="https://alexander-belikov.github.io/images/icon_huf49b158b2681d286a60137da38ca7574_154815_512x512_fill_lanczos_center_3.png">
+  <meta property="og:url" content="https://alexander-belikov.github.io/talk/2021-arango/">
+  <meta property="og:title" content="ArangoDB : case for graphs | Academic">
+  <meta property="og:description" content=""><meta property="og:image" content="https://alexander-belikov.github.io/images/icon_huf49b158b2681d286a60137da38ca7574_154815_512x512_fill_lanczos_center_3.png">
   <meta property="twitter:image" content="https://alexander-belikov.github.io/images/icon_huf49b158b2681d286a60137da38ca7574_154815_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2021-09-04T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2021-09-04T17:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2021-09-04T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2021-05-20T17:00:00&#43;00:00">
   
 
   
 
 
+
+  
     
-
-
-
-
-
-
-  
 
 
 
@@ -344,37 +339,28 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BlogPosting",
+  "@type": "Event",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://alexander-belikov.github.io/post/2021-wos-arango-sql/"
+    "@id": "https://alexander-belikov.github.io/talk/2021-arango/"
   },
-  "headline": "Web of Science in a graph database setting",
+  "name": "ArangoDB : case for graphs",
   
-  "datePublished": "2021-09-04T00:00:00Z",
-  "dateModified": "2021-09-04T00:00:00Z",
   
-  "author": {
+  "startDate": "2021-05-20T17:00:00Z",
+  
+  
+  "performer": {
     "@type": "Person",
     "name": "Alexander Belikov"
   },
   
-  "publisher": {
-    "@type": "Organization",
-    "name": "Academic",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://alexander-belikov.github.io/images/icon_huf49b158b2681d286a60137da38ca7574_154815_192x192_fill_lanczos_center_3.png"
-    }
-  },
-  "description": "We live in an era of accelerating data generation. The sizes of datasets keep growing and so does their structure. Despite the continuously growing capacity of computers real-world datasets surpass the limits of in-memory processing of even larger commercially available computers, and so data manipulation and analysis has to be aided by the use of databases."
+  "description": ""
 }
 </script>
 
   
 
-  
-
 
   
 
@@ -385,7 +371,7 @@
 
 
 
-  <title>Web of Science in a graph database setting | Academic</title>
+  <title>ArangoDB : case for graphs | Academic</title>
 
 </head>
 
@@ -676,7 +662,7 @@
   </div>
 
   <div class="page-body">
-    <article class="article">
+    <div class="pub">
 
   
 
@@ -697,10 +683,8 @@
   
   
 <div class="article-container pt-3">
-  <h1>Web of Science in a graph database setting</h1>
+  <h1>ArangoDB : case for graphs</h1>
 
-  
-  <p class="page-subtitle">Should you choose to use a graph database, such as ArangoDB, over something SQL-like for your dataset of interest? How to cast Web of Science into a graph schema?</p>
   
 
   
@@ -717,28 +701,15 @@
     
 
   
-  <span ><a href="/author/alexander-belikov/">Alexander Belikov</a></span>, <span ><a href="/author/anant-matai/">Anant Matai</a></span>
+  <span ><a href="/author/alexander-belikov/">Alexander Belikov</a></span>
   </div>
   
   
 
   
-  <span class="article-date">
-    
-    
-      
-    
-    Sep 4, 2021
-  </span>
-  
 
   
 
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    5 min read
-  </span>
   
 
   
@@ -765,6 +736,45 @@
 
 
 
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+<a class="btn btn-outline-primary my-1 mr-1" href="/media/ArangoDB_primer_2021.pdf" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
 
 
   
@@ -774,197 +784,32 @@
 
   <div class="article-container">
 
-    <div class="article-style">
-      <p>We live in an era of accelerating data generation. The sizes of datasets keep growing and so does their structure. Despite the continuously growing capacity of computers real-world datasets surpass the limits of in-memory processing of even larger commercially available computers, and so data manipulation and analysis has to be aided by the use of databases. Across multiple domains, notably sociology, most interesting phenomena tend to resemble graphs rather than tables.
-Graph databases, compared to their more established SQL counterparts offer multiple advantages, due to a more natural representation of the data. Instead of tables, where each row contains a record with potentially empty fields, in graph databases, entities are vertices and the relations between them are represented by edges. A well-known join operation is represented as a reaching second order neighbours.</p>
-<p>We ran a practical comparison of MySQL and ArangoDB databases on a subset of the Web of Science Database.
-We designed and benchmarked sample queries, some of which specifically aimed to highlight the graph-like structure of the dataset.</p>
-<h2 id="sample-dataset">Sample Dataset</h2>
-<p>Web of Science (WOS) is one of the most complete academic datasets produced by Clarivate Analytics (previously by Thomson Reuters). As of 2017 it covered 12K journals and 160K conference proceedings. It contains publication records including authors, affiliations, references, abstracts etc.
-For our test we took a subset of available records published later or in 1971 and not later or in 1980.
-To properly highlight the case for graph applications for each record we retrieved and cast the WOS dataset as csv-files:</p>
-<ul>
-<li>publications (publication metadata, contains journal information)</li>
-<li>institutions (affiliation data)</li>
-<li>contributors (author data)</li>
-<li>refs (references data)</li>
-</ul>
-<p>As a results we ended up with 5.87M unique publications, 12.3M rows in contributors, 68.7M rows in refs, 163K rows in institutions  (affiliation data coverage seems to be incomplete).</p>
-<p><strong>Publications</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">wos_id</th>
-<th style="text-align:left">issn</th>
-<th style="text-align:left">title</th>
-<th style="text-align:right">pubyear</th>
-<th style="text-align:right">pubmonth</th>
-<th style="text-align:left">language</th>
-<th style="text-align:left">source</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">P1</td>
-<td style="text-align:left">J1</td>
-<td style="text-align:left">Title1</td>
-<td style="text-align:right">1960</td>
-<td style="text-align:right">1</td>
-<td style="text-align:left">English</td>
-<td style="text-align:left">CHILD DEVELOPMENT</td>
-</tr>
-<tr>
-<td style="text-align:left">P2</td>
-<td style="text-align:left">J1</td>
-<td style="text-align:left">Title2</td>
-<td style="text-align:right">1962</td>
-<td style="text-align:right">1</td>
-<td style="text-align:left">English</td>
-<td style="text-align:left">CHILD DEVELOPMENT</td>
-</tr>
-<tr>
-<td style="text-align:left">P3</td>
-<td style="text-align:left">J1</td>
-<td style="text-align:left">Title3</td>
-<td style="text-align:right">1963</td>
-<td style="text-align:right">1</td>
-<td style="text-align:left">English</td>
-<td style="text-align:left">CHILD DEVELOPMENT</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Contributors</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">wos_id</th>
-<th style="text-align:right">position</th>
-<th style="text-align:left">first_name</th>
-<th style="text-align:left">last_name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">P1</td>
-<td style="text-align:right">1</td>
-<td style="text-align:left">A</td>
-<td style="text-align:left">L1</td>
-</tr>
-<tr>
-<td style="text-align:left">P1</td>
-<td style="text-align:right">2</td>
-<td style="text-align:left">A</td>
-<td style="text-align:left">L2</td>
-</tr>
-<tr>
-<td style="text-align:left">P2</td>
-<td style="text-align:right">1</td>
-<td style="text-align:left">A</td>
-<td style="text-align:left">L3</td>
-</tr>
-</tbody>
-</table>
-<p><strong>References</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">wos_id</th>
-<th style="text-align:left">uid</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">P8</td>
-<td style="text-align:left">P1</td>
-</tr>
-<tr>
-<td style="text-align:left">P8</td>
-<td style="text-align:left">P2</td>
-</tr>
-<tr>
-<td style="text-align:left">P7</td>
-<td style="text-align:left">P4</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Institutions</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">wos_id</th>
-<th style="text-align:left">organization</th>
-<th style="text-align:left">country</th>
-<th style="text-align:left">city</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">P1</td>
-<td style="text-align:left">O1</td>
-<td style="text-align:left">Switzerland</td>
-<td style="text-align:left">Geneva</td>
-</tr>
-<tr>
-<td style="text-align:left">P2</td>
-<td style="text-align:left">O1</td>
-<td style="text-align:left">Switzerland</td>
-<td style="text-align:left">Geneva</td>
-</tr>
-<tr>
-<td style="text-align:left">P3</td>
-<td style="text-align:left">O1</td>
-<td style="text-align:left">Switzerland</td>
-<td style="text-align:left">Geneva</td>
-</tr>
-</tbody>
-</table>
-<h3 id="mysql-setting">MySQL setting</h3>
-<p>CSV files were directly loaded into MySQL database and corresponding indices were created.
-MySQL was set up on a desktop with 64Gb of RAM.</p>
-<h3 id="arangodb-setting">ArangoDB setting</h3>
-<p>We used ArangoDB version 3.4, hosted on an Ubuntu 16.04 with 16Gb of ram.
-For arangodb each type of csv file (blue) was projected on one or more arango vertex collections (green). From the point of view of a graph database each encodes not only a node in a vertex collection (potentially non-unique), but also an edge (hopefully unique). The inherent difficulty is to create edges between correct vertices. For that we decide which fields are going to uniquely describe a document from a vertex collection.</p>
-<p><img src="./figs/wos_csv_source2vc.png" alt="source2vc"></p>
-<p>We also defined the mappings of table columns onto field of vertex collection.
-Vertex collections contained the following fields (purple, with indices in boxed fields).</p>
-<p><img src="./figs/wos_csv_vc2fields.png" alt="source2vc"></p>
-<p>Edges were created between vertex collections.</p>
-<p><img src="./figs/wos_csv_vc2vc.png" alt="source2vc"></p>
-<p>Please note the edges connecting publication collection to itself, representing references.</p>
-<p>The ingestion was set up using pyarango package and arango query language aql.
-At the time of benchmarking pyarango did not implement all the arango functions, so we found it most reasonable to simply execute aql queries as strings.</p>
-<p>De-duplication of existing documents (documents are considered identical if defining fields, which were also indexed upon, are the same, grey boxes in the figure above) was part of the ingestion process (see upsert).
-The ingestion process took approximately 23 hours.</p>
-<h3 id="queries">Queries</h3>
-<ol>
-<li>return the most popular journals by number of publications for 1978.</li>
-<li>return 1000 most popular words (minus stop words) from all available titles.</li>
-<li>return the authors who changed their country more than twice.</li>
-<li>for publication p compute the ratio of number of second order neighbors to first order neighbors in the directed network of citations.</li>
-<li>count the number of times publications from journal j published in 1978 cite publications in journal j’ published in period [1973, 1978).</li>
-<li>given a subset of publications, compute the cardinality of the power set defined as papers cited by p, papers that are cited by papers cited by p etc of order 5. As the subset of publications we take 100 publication from query 4 with the highest ratio.</li>
-</ol>
-<p>In the Figure below we plot query times as a function of the size of the restricting subset, where applicable. Red, solid lines correspond to arangodb, blue, dashed lines and star markers - to MySQL.</p>
-<p><img src="./figs/queries_plot_times.png" alt="source2vc"></p>
-<p>For Q1, the limit is on the number of journals.</p>
-<p>For Q2 - on the number of publications.</p>
-<p>For Q3 - on the number of contributors.</p>
-<p>For Q4 - on the number of publications.</p>
-<p>For Q5 - on both the number of journals which are citing and which are being cited, so the for limit size N, the result is an NxN matrix. We note that Q5 essentially represents Eigenfactor computation.</p>
-<p>For Q6 - on the number of source publications.</p>
-<p>Arango queries can be found <a href="https://github.com/alexander-belikov/wos_db_studies/blob/master/run/queries.py" target="_blank" rel="noopener">wos_db_studies/run/queries</a></p>
-<p>SQL queries can be found
-<a href="https://github.com/brendanchambers/wos_db_benchmark/tree/master/benchmarking" target="_blank" rel="noopener">wos_db_benchmark/benchmarking</a></p>
-<h3 id="conclusion">Conclusion</h3>
-<p>While our comparison between sql and graph databases is far from being comprehensive, we nonetheless are able to conclude that</p>
-<ul>
-<li>the learning curve of Arango is steeper than that of MySQL</li>
-<li>ArangoDB is robust</li>
-<li>AQL is expressive with respect to graph-specific queries</li>
-</ul>
-<h3 id="acknowledgements">Acknowledgements</h3>
-<p>Prepared with the help of Brendan Chambers.</p>
+    
+      <br>
+    
 
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Date</div>
+          <div class="col-12 col-md-9">
+            May 20, 2021 17:00
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+
+    
+
+    
+
+    <div class="space-below"></div>
+
+    <div class="article-style">
+      
     </div>
 
     
@@ -979,8 +824,6 @@ The ingestion process took approximately 23 hours.</p>
   <a class="badge badge-light" href="/tag/graph-database/">Graph Database</a>
   
   <a class="badge badge-light" href="/tag/arangodb/">ArangoDB</a>
-  
-  <a class="badge badge-light" href="/tag/web-of-science/">Web of Science</a>
   
 </div>
 
@@ -997,7 +840,7 @@ The ingestion process took approximately 23 hours.</p>
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://alexander-belikov.github.io/post/2021-wos-arango-sql/&amp;text=Web%20of%20Science%20in%20a%20graph%20database%20setting" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://alexander-belikov.github.io/talk/2021-arango/&amp;text=ArangoDB%20:%20case%20for%20graphs" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -1010,7 +853,7 @@ The ingestion process took approximately 23 hours.</p>
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://alexander-belikov.github.io/post/2021-wos-arango-sql/&amp;t=Web%20of%20Science%20in%20a%20graph%20database%20setting" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://alexander-belikov.github.io/talk/2021-arango/&amp;t=ArangoDB%20:%20case%20for%20graphs" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1023,7 +866,7 @@ The ingestion process took approximately 23 hours.</p>
       
       
       <li>
-        <a href="mailto:?subject=Web%20of%20Science%20in%20a%20graph%20database%20setting&amp;body=https://alexander-belikov.github.io/post/2021-wos-arango-sql/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=ArangoDB%20:%20case%20for%20graphs&amp;body=https://alexander-belikov.github.io/talk/2021-arango/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1036,7 +879,7 @@ The ingestion process took approximately 23 hours.</p>
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://alexander-belikov.github.io/post/2021-wos-arango-sql/&amp;title=Web%20of%20Science%20in%20a%20graph%20database%20setting" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://alexander-belikov.github.io/talk/2021-arango/&amp;title=ArangoDB%20:%20case%20for%20graphs" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1049,7 +892,7 @@ The ingestion process took approximately 23 hours.</p>
       
       
       <li>
-        <a href="whatsapp://send?text=Web%20of%20Science%20in%20a%20graph%20database%20setting%20https://alexander-belikov.github.io/post/2021-wos-arango-sql/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=ArangoDB%20:%20case%20for%20graphs%20https://alexander-belikov.github.io/talk/2021-arango/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1062,7 +905,7 @@ The ingestion process took approximately 23 hours.</p>
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://alexander-belikov.github.io/post/2021-wos-arango-sql/&amp;title=Web%20of%20Science%20in%20a%20graph%20database%20setting" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://alexander-belikov.github.io/talk/2021-arango/&amp;title=ArangoDB%20:%20case%20for%20graphs" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -1092,9 +935,7 @@ The ingestion process took approximately 23 hours.</p>
     <h3>Related</h3>
     <ul>
       
-      <li><a href="/talk/2021-arango/">ArangoDB : case for graphs</a></li>
-      
-      <li><a href="/publication/2019-creating/">Creating training data for scientific named entity recognition with minimal human effort</a></li>
+      <li><a href="/post/2021-wos-arango-sql/">Web of Science in a graph database setting</a></li>
       
     </ul>
   </div>
@@ -1105,7 +946,7 @@ The ingestion process took approximately 23 hours.</p>
 
 
   </div>
-</article>
+</div>
   </div>
 
   <div class="page-footer">

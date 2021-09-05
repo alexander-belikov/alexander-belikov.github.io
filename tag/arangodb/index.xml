@@ -209,5 +209,13 @@ The ingestion process took approximately 23 hours.&lt;/p&gt;
 </description>
     </item>
     
+    <item>
+      <title>ArangoDB : case for graphs</title>
+      <link>https://alexander-belikov.github.io/talk/2021-arango/</link>
+      <pubDate>Thu, 20 May 2021 17:00:00 +0000</pubDate>
+      <guid>https://alexander-belikov.github.io/talk/2021-arango/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
