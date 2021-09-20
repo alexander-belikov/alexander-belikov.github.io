@@ -779,9 +779,9 @@
     <div class="article-style">
       <p>We live in an era of accelerating data generation. The sizes of datasets keep growing and so does their structure. Despite the continuously growing capacity of computers real-world datasets surpass the limits of in-memory processing of even larger commercially available computers, and so data manipulation and analysis has to be aided by the use of databases. Across multiple domains, notably sociology, most interesting phenomena tend to resemble graphs rather than tables.
 Graph databases, compared to their more established SQL counterparts, offer multiple advantages, due to a more natural representation of the data. Instead of tables, where each row contains a record with potentially empty fields, in graph databases, entities are vertices and relations between them are represented by edges. A well-known <em>join</em> operation is represented as a loop over neighbouring vertices.</p>
-<p>In this blogpost we describe how we set up MySQL and ArangoDB [2] databases on a subset of the Web of Science dataset  and designed and benchmarked sample queries, some of which specifically aimed to highlight the graph-like structure of the dataset.</p>
+<p>In this blogpost we describe how we set up MySQL and ArangoDB [1] databases on a subset of the Web of Science dataset [2] and designed and benchmarked sample queries during our tenure at Knowledge Lab [3].</p>
 <h2 id="sample-dataset">Sample Dataset</h2>
-<p>Web of Science (WoS) [1] is one of the most complete academic datasets produced by Clarivate Analytics (previously by Thomson Reuters). As of 2017 it covered 12K journals and 160K conference proceedings. It contains publication records including authors, affiliations, references, abstracts etc.
+<p>Web of Science (WoS)  is one of the most complete academic datasets produced by Clarivate Analytics (previously by Thomson Reuters). As of 2017 it covered 12K journals and 160K conference proceedings. It contains publication records including authors, affiliations, references, abstracts etc.
 For our test we took a subset of available records published between 1971 and 1980.
 To properly highlight the case for graph databases application (and to simplify ingestion scripts) for each record we retrieved and cast the WoS dataset (originally in XML form) as csv-files containing certain relations:</p>
 <ul>
@@ -969,8 +969,9 @@ Nonetheless, we are able to conclude that:</p>
 </ul>
 <h3 id="references">References</h3>
 <ol>
-<li><a href="https://en.wikipedia.org/wiki/Web_of_Science" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Web_of_Science</a></li>
 <li><a href="https://www.arangodb.com/" target="_blank" rel="noopener">https://www.arangodb.com/</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Web_of_Science" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Web_of_Science</a></li>
+<li><a href="https://www.knowledgelab.org/" target="_blank" rel="noopener">https://www.knowledgelab.org/</a></li>
 <li><a href="http://www.eigenfactor.org/" target="_blank" rel="noopener">http://www.eigenfactor.org/</a></li>
 </ol>
 <h3 id="acknowledgements">Acknowledgements</h3>
@@ -992,6 +993,8 @@ Nonetheless, we are able to conclude that:</p>
   <a class="badge badge-light" href="/tag/arangodb/">ArangoDB</a>
   
   <a class="badge badge-light" href="/tag/web-of-science/">Web of Science</a>
+  
+  <a class="badge badge-light" href="/tag/knowledge-lab/">Knowledge Lab</a>
   
 </div>
 
