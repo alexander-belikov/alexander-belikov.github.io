@@ -316,7 +316,7 @@
   
   <meta property="og:site_name" content="Academic">
   <meta property="og:url" content="https://alexander-belikov.github.io/post/2021-wos-arango-sql/">
-  <meta property="og:title" content="Web of Science in a graph database setting | Academic">
+  <meta property="og:title" content="Pros and Cons of casting Web of Science into a graph database | Academic">
   <meta property="og:description" content="We live in an era of accelerating data generation. The sizes of datasets keep growing and so does their structure. Despite the continuously growing capacity of computers real-world datasets surpass the limits of in-memory processing of even larger commercially available computers, and so data manipulation and analysis has to be aided by the use of databases."><meta property="og:image" content="https://alexander-belikov.github.io/images/icon_huf49b158b2681d286a60137da38ca7574_154815_512x512_fill_lanczos_center_3.png">
   <meta property="twitter:image" content="https://alexander-belikov.github.io/images/icon_huf49b158b2681d286a60137da38ca7574_154815_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
   
@@ -349,7 +349,7 @@
     "@type": "WebPage",
     "@id": "https://alexander-belikov.github.io/post/2021-wos-arango-sql/"
   },
-  "headline": "Web of Science in a graph database setting",
+  "headline": "Pros and Cons of casting Web of Science into a graph database",
   
   "datePublished": "2021-09-04T00:00:00Z",
   "dateModified": "2021-09-04T00:00:00Z",
@@ -385,7 +385,7 @@
 
 
 
-  <title>Web of Science in a graph database setting | Academic</title>
+  <title>Pros and Cons of casting Web of Science into a graph database | Academic</title>
 
 </head>
 
@@ -697,10 +697,10 @@
   
   
 <div class="article-container pt-3">
-  <h1>Web of Science in a graph database setting</h1>
+  <h1>Pros and Cons of casting Web of Science into a graph database</h1>
 
   
-  <p class="page-subtitle">Should you choose to use a graph database, such as ArangoDB, over something SQL-like for your dataset of interest? How to cast Web of Science into a graph schema?</p>
+  <p class="page-subtitle">Should you choose to use a graph database over an SQL counterpart for your dataset of interest? How to cast your dataset into a graph schema?</p>
   
 
   
@@ -737,7 +737,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    5 min read
+    6 min read
   </span>
   
 
@@ -776,20 +776,20 @@
 
     <div class="article-style">
       <p>We live in an era of accelerating data generation. The sizes of datasets keep growing and so does their structure. Despite the continuously growing capacity of computers real-world datasets surpass the limits of in-memory processing of even larger commercially available computers, and so data manipulation and analysis has to be aided by the use of databases. Across multiple domains, notably sociology, most interesting phenomena tend to resemble graphs rather than tables.
-Graph databases, compared to their more established SQL counterparts offer multiple advantages, due to a more natural representation of the data. Instead of tables, where each row contains a record with potentially empty fields, in graph databases, entities are vertices and the relations between them are represented by edges. A well-known join operation is represented as a reaching second order neighbours.</p>
-<p>We ran a practical comparison of MySQL and ArangoDB databases on a subset of the Web of Science Database.
-We designed and benchmarked sample queries, some of which specifically aimed to highlight the graph-like structure of the dataset.</p>
+Graph databases, compared to their more established SQL counterparts, offer multiple advantages, due to a more natural representation of the data. Instead of tables, where each row contains a record with potentially empty fields, in graph databases, entities are vertices and relations between them are represented by edges. A well-known <em>join</em> operation is represented as a loop over neighbouring vertices.</p>
+<p>In this blogpost we describe how we set up MySQL and ArangoDB [2] databases on a subset of the Web of Science dataset  and designed and benchmarked sample queries, some of which specifically aimed to highlight the graph-like structure of the dataset.</p>
 <h2 id="sample-dataset">Sample Dataset</h2>
-<p>Web of Science (WOS) is one of the most complete academic datasets produced by Clarivate Analytics (previously by Thomson Reuters). As of 2017 it covered 12K journals and 160K conference proceedings. It contains publication records including authors, affiliations, references, abstracts etc.
-For our test we took a subset of available records published later or in 1971 and not later or in 1980.
-To properly highlight the case for graph applications for each record we retrieved and cast the WOS dataset as csv-files:</p>
+<p>Web of Science (WoS) [1] is one of the most complete academic datasets produced by Clarivate Analytics (previously by Thomson Reuters). As of 2017 it covered 12K journals and 160K conference proceedings. It contains publication records including authors, affiliations, references, abstracts etc.
+For our test we took a subset of available records published between 1971 and 1980.
+To properly highlight the case for graph databases application (and to simplify ingestion scripts) for each record we retrieved and cast the WoS dataset (originally in XML form) as csv-files containing certain relations:</p>
 <ul>
 <li>publications (publication metadata, contains journal information)</li>
 <li>institutions (affiliation data)</li>
 <li>contributors (author data)</li>
-<li>refs (references data)</li>
+<li>refs (citation data)</li>
 </ul>
 <p>As a results we ended up with 5.87M unique publications, 12.3M rows in contributors, 68.7M rows in refs, 163K rows in institutions  (affiliation data coverage seems to be incomplete).</p>
+<p>Below are examples of different types of intermediate tables:</p>
 <p><strong>Publications</strong></p>
 <table>
 <thead>
@@ -864,29 +864,6 @@ To properly highlight the case for graph applications for each record we retriev
 </tr>
 </tbody>
 </table>
-<p><strong>References</strong></p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">wos_id</th>
-<th style="text-align:left">uid</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">P8</td>
-<td style="text-align:left">P1</td>
-</tr>
-<tr>
-<td style="text-align:left">P8</td>
-<td style="text-align:left">P2</td>
-</tr>
-<tr>
-<td style="text-align:left">P7</td>
-<td style="text-align:left">P4</td>
-</tr>
-</tbody>
-</table>
 <p><strong>Institutions</strong></p>
 <table>
 <thead>
@@ -918,50 +895,82 @@ To properly highlight the case for graph applications for each record we retriev
 </tr>
 </tbody>
 </table>
+<p><strong>References</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">wos_id</th>
+<th style="text-align:left">uid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">P8</td>
+<td style="text-align:left">P1</td>
+</tr>
+<tr>
+<td style="text-align:left">P8</td>
+<td style="text-align:left">P2</td>
+</tr>
+<tr>
+<td style="text-align:left">P7</td>
+<td style="text-align:left">P4</td>
+</tr>
+</tbody>
+</table>
 <h3 id="mysql-setting">MySQL setting</h3>
 <p>CSV files were directly loaded into MySQL database and corresponding indices were created.
-MySQL was set up on a desktop with 64Gb of RAM.</p>
+MySQL was set up on a desktop with 64Gb of RAM. Ingestion took approximately 35 minutes.</p>
 <h3 id="arangodb-setting">ArangoDB setting</h3>
 <p>We used ArangoDB version 3.4, hosted on an Ubuntu 16.04 with 16Gb of ram.
-For arangodb each type of csv file (blue) was projected on one or more arango vertex collections (green). From the point of view of a graph database each encodes not only a node in a vertex collection (potentially non-unique), but also an edge (hopefully unique). The inherent difficulty is to create edges between correct vertices. For that we decide which fields are going to uniquely describe a document from a vertex collection.</p>
+For arangodb each type of csv file (blue) was projected on one or more vertex collections (green). From the point of view of a graph database each encodes not only a node in a vertex collection (potentially non-unique), but also an edge (hopefully unique). The inherent difficulty is to create edges between correct vertices. For that we decide which fields are going to uniquely describe a document from a vertex collection. The ingestion process took approximately 12 hours. While for the SQL test ingestion the tables were simply loaded into a MySQL database, for the graph database we upserted the vertices, i.e. for each vertex <em>upsert</em> we had to check if a vertex with the same index fields exists in the collection and retrieve its <em>id</em> if it did.</p>
 <p><img src="./figs/wos_csv_source2vc.png" alt="source2vc"></p>
-<p>We also defined the mappings of table columns onto field of vertex collection.
+<p>One of the crucial steps is to define the mappings of table columns onto field of vertex collection.
 Vertex collections contained the following fields (purple, with indices in boxed fields).</p>
 <p><img src="./figs/wos_csv_vc2fields.png" alt="source2vc"></p>
-<p>Edges were created between vertex collections.</p>
+<p>In order to insert edge instances, we first created edge collections as collections between vertex collections. Each document in an edge collection must contai two fields <em>_to</em> and <em>_from</em>, with corresponding values being the ids of the source and the target vertices.</p>
 <p><img src="./figs/wos_csv_vc2vc.png" alt="source2vc"></p>
-<p>Please note the edges connecting publication collection to itself, representing references.</p>
-<p>The ingestion was set up using pyarango package and arango query language aql.
-At the time of benchmarking pyarango did not implement all the arango functions, so we found it most reasonable to simply execute aql queries as strings.</p>
+<p>Please note the edge connecting <em>publication</em> collection to itself, representing citations: both <em>wos_id</em> and <em>uid</em> have to be mapped to the same <em>id</em> of the publication collection.</p>
+<p>Our ingestion pipeline used <code>pyarango</code> package and arango query language <code>aql</code>.
+<code>pyarango</code> provides an interfaces to a limited number of functions to manage ArangoDB, so certain steps were executed as <code>aql</code> queries.</p>
 <p>De-duplication of existing documents (documents are considered identical if defining fields, which were also indexed upon, are the same, grey boxes in the figure above) was part of the ingestion process (see upsert).
-The ingestion process took approximately 23 hours.</p>
+The ingestion process took approximately 12 hours, of which citation ingestion took about 8.</p>
 <h3 id="queries">Queries</h3>
 <ol>
-<li>return the most popular journals by number of publications for 1978.</li>
-<li>return 1000 most popular words (minus stop words) from all available titles.</li>
-<li>return the authors who changed their country more than twice.</li>
-<li>for publication p compute the ratio of number of second order neighbors to first order neighbors in the directed network of citations.</li>
-<li>count the number of times publications from journal j published in 1978 cite publications in journal j’ published in period [1973, 1978).</li>
-<li>given a subset of publications, compute the cardinality of the power set defined as papers cited by p, papers that are cited by papers cited by p etc of order 5. As the subset of publications we take 100 publication from query 4 with the highest ratio.</li>
+<li>Calculate number of publications per journal for 1978 and return in descending order.</li>
+<li>Return 1000 most popular words (minus stop words) from all available titles.</li>
+<li>Find authors who changed their country more than twice.</li>
+<li>For a given publication <em>p</em> compute the ratio <em>z</em> of number of second order neighbors to first order neighbors in the directed network of citations.</li>
+<li>Count the number of times publications from journal <em>j</em> published in 1978 cite publications in journal <em>j’</em> published in the previous 5 years.</li>
+<li>Given a subset of publications, compute the cardinality of the power set defined as papers cited by <em>p</em>, papers that are cited by papers cited by <em>p</em> and so on of order 5. Take the top 100 publications from Q4 with the highest ratio <em>z</em>.</li>
 </ol>
-<p>In the Figure below we plot query times as a function of the size of the restricting subset, where applicable. Red, solid lines correspond to arangodb, blue, dashed lines and star markers - to MySQL.</p>
+<p>Below we plot query times in seconds as a function of the size of the restricting subset, where applicable. Red, solid lines correspond to ArangoDB, blue, dashed lines and star markers - to MySQL.</p>
 <p><img src="./figs/queries_plot_times.png" alt="source2vc"></p>
 <p>For Q1, the limit is on the number of journals.</p>
 <p>For Q2 - on the number of publications.</p>
 <p>For Q3 - on the number of contributors.</p>
 <p>For Q4 - on the number of publications.</p>
-<p>For Q5 - on both the number of journals which are citing and which are being cited, so the for limit size N, the result is an NxN matrix. We note that Q5 essentially represents Eigenfactor computation.</p>
+<p>For Q5 - on both the number of journals which are citing and which are being cited, so the for limit size N, the result is an NxN matrix. We note that Q5 essentially represents Eigenfactor [3] computation.</p>
 <p>For Q6 - on the number of source publications.</p>
 <p>Arango queries can be found <a href="https://github.com/alexander-belikov/wos_db_studies/blob/master/run/queries.py" target="_blank" rel="noopener">wos_db_studies/run/queries</a></p>
 <p>SQL queries can be found
 <a href="https://github.com/brendanchambers/wos_db_benchmark/tree/master/benchmarking" target="_blank" rel="noopener">wos_db_benchmark/benchmarking</a></p>
+<p>While our MySQL is less complete than that of ArangoDB (the results from Q2-Q4 were close to identical), where applicable the comparison reveals that MySQL shines where expected - in linear queries, such as looping over titles and does not do so well in graph-oriented tasks. Notably the results from ArangoDB for queries 3 and 4 surpass MySQL results by almost two orders of magnitude (!).</p>
 <h3 id="conclusion">Conclusion</h3>
-<p>While our comparison between sql and graph databases is far from being comprehensive, we nonetheless are able to conclude that</p>
+<p>The choice of schemas, the details of index definitions and computer hardware all contribute to the uncertainty of our results.<br>
+Nonetheless, we are able to conclude that:</p>
 <ul>
-<li>the learning curve of Arango is steeper than that of MySQL</li>
-<li>ArangoDB is robust</li>
-<li>AQL is expressive with respect to graph-specific queries</li>
+<li>ArangoDB is a robust and well-supported database with excellent documentation (however, the learning curve might be steep compared to MySQL)</li>
+<li>Ingestion time for ArangoDB is greater than that for the MySQL counterpart</li>
+<li>ArangoDB beats MySQL on graph-oriented queries</li>
+<li><em>AQL</em> is expressive with respect to graph-specific queries</li>
 </ul>
+<h3 id="references">References</h3>
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/Web_of_Science" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Web_of_Science</a></li>
+<li><a href="https://www.arangodb.com/" target="_blank" rel="noopener">https://www.arangodb.com/</a></li>
+<li><a href="http://www.eigenfactor.org/" target="_blank" rel="noopener">http://www.eigenfactor.org/</a></li>
+</ol>
 <h3 id="acknowledgements">Acknowledgements</h3>
 <p>Prepared with the help of Brendan Chambers.</p>
 
@@ -997,7 +1006,7 @@ The ingestion process took approximately 23 hours.</p>
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://alexander-belikov.github.io/post/2021-wos-arango-sql/&amp;text=Web%20of%20Science%20in%20a%20graph%20database%20setting" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://alexander-belikov.github.io/post/2021-wos-arango-sql/&amp;text=Pros%20and%20Cons%20of%20casting%20Web%20of%20Science%20into%20a%20graph%20database" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -1010,7 +1019,7 @@ The ingestion process took approximately 23 hours.</p>
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://alexander-belikov.github.io/post/2021-wos-arango-sql/&amp;t=Web%20of%20Science%20in%20a%20graph%20database%20setting" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://alexander-belikov.github.io/post/2021-wos-arango-sql/&amp;t=Pros%20and%20Cons%20of%20casting%20Web%20of%20Science%20into%20a%20graph%20database" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1023,7 +1032,7 @@ The ingestion process took approximately 23 hours.</p>
       
       
       <li>
-        <a href="mailto:?subject=Web%20of%20Science%20in%20a%20graph%20database%20setting&amp;body=https://alexander-belikov.github.io/post/2021-wos-arango-sql/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Pros%20and%20Cons%20of%20casting%20Web%20of%20Science%20into%20a%20graph%20database&amp;body=https://alexander-belikov.github.io/post/2021-wos-arango-sql/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1036,7 +1045,7 @@ The ingestion process took approximately 23 hours.</p>
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://alexander-belikov.github.io/post/2021-wos-arango-sql/&amp;title=Web%20of%20Science%20in%20a%20graph%20database%20setting" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://alexander-belikov.github.io/post/2021-wos-arango-sql/&amp;title=Pros%20and%20Cons%20of%20casting%20Web%20of%20Science%20into%20a%20graph%20database" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1049,7 +1058,7 @@ The ingestion process took approximately 23 hours.</p>
       
       
       <li>
-        <a href="whatsapp://send?text=Web%20of%20Science%20in%20a%20graph%20database%20setting%20https://alexander-belikov.github.io/post/2021-wos-arango-sql/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=Pros%20and%20Cons%20of%20casting%20Web%20of%20Science%20into%20a%20graph%20database%20https://alexander-belikov.github.io/post/2021-wos-arango-sql/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1062,7 +1071,7 @@ The ingestion process took approximately 23 hours.</p>
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://alexander-belikov.github.io/post/2021-wos-arango-sql/&amp;title=Web%20of%20Science%20in%20a%20graph%20database%20setting" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://alexander-belikov.github.io/post/2021-wos-arango-sql/&amp;title=Pros%20and%20Cons%20of%20casting%20Web%20of%20Science%20into%20a%20graph%20database" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
