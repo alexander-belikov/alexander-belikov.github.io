@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>NILM | Academic</title>
-    <link>https://alexander-belikov.github.io/tag/nilm/</link>
-      <atom:link href="https://alexander-belikov.github.io/tag/nilm/index.xml" rel="self" type="application/rss+xml" />
-    <description>NILM</description>
+    <title>Guillaume Matheron | Academic</title>
+    <link>https://alexander-belikov.github.io/author/guillaume-matheron/</link>
+      <atom:link href="https://alexander-belikov.github.io/author/guillaume-matheron/index.xml" rel="self" type="application/rss+xml" />
+    <description>Guillaume Matheron</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>Alexander Belikov, CR</copyright><lastBuildDate>Tue, 22 Mar 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://alexander-belikov.github.io/images/icon_huf49b158b2681d286a60137da38ca7574_154815_512x512_fill_lanczos_center_3.png</url>
-      <title>NILM</title>
-      <link>https://alexander-belikov.github.io/tag/nilm/</link>
+      <title>Guillaume Matheron</title>
+      <link>https://alexander-belikov.github.io/author/guillaume-matheron/</link>
     </image>
     
     <item>
@@ -17,15 +17,6 @@
       <link>https://alexander-belikov.github.io/publication/2022-hw-wh/</link>
       <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate>
       <guid>https://alexander-belikov.github.io/publication/2022-hw-wh/</guid>
-      <description>&lt;h1 id=&#34;supplementary-notes-can-be-added-here-including-code-math-and-imageshttpswowchemycomdocswriting-markdown-latex&#34;&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code, math, and images&lt;/a&gt;.&lt;/h1&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Bayesian model of electrical heating disaggregation</title>
-      <link>https://alexander-belikov.github.io/publication/2020/</link>
-      <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
-      <guid>https://alexander-belikov.github.io/publication/2020/</guid>
       <description>&lt;h1 id=&#34;supplementary-notes-can-be-added-here-including-code-math-and-imageshttpswowchemycomdocswriting-markdown-latex&#34;&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code, math, and images&lt;/a&gt;.&lt;/h1&gt;
 </description>
     </item>
