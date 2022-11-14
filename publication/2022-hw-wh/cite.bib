@@ -1,17 +1,13 @@
-@misc{https://doi.org/10.48550/arxiv.2203.11268,
-  doi = {10.48550/ARXIV.2203.11268},
-
-  url = {https://arxiv.org/abs/2203.11268},
-
-  author = {Belikov, Alexander and Matheron, Guillaume and Sassi, Johan},
-
-  keywords = {Signal Processing (eess.SP), Machine Learning (cs.LG), Systems and Control (eess.SY), Methodology (stat.ME), FOS: Electrical engineering, electronic engineering, information engineering, FOS: Electrical engineering, electronic engineering, information engineering, FOS: Computer and information sciences, FOS: Computer and information sciences},
-
-  title = {Domain Knowledge Aids in Signal Disaggregation; the Example of the Cumulative Water Heater},
-
-  publisher = {arXiv},
-
-  year = {2022},
-
-  copyright = {arXiv.org perpetual, non-exclusive license}
+@article{BELIKOV2022112200,
+title = {Domain knowledge aids in signal disaggregation; the example of the cumulative water heater},
+journal = {Energy and Buildings},
+volume = {268},
+pages = {112200},
+year = {2022},
+issn = {0378-7788},
+doi = {https://doi.org/10.1016/j.enbuild.2022.112200},
+url = {https://www.sciencedirect.com/science/article/pii/S0378778822003711},
+author = {Alexander Belikov and Guillaume Matheron and Johan Sassi},
+keywords = {Electric water heater, Energy disaggregation, Non-intrusive load monitoring, Residential sector, Smart meters},
+abstract = {In this article we present an unsupervised low-frequency method aimed at detecting and disaggregating the power used by Cumulative Water Heaters (CWH) in residential homes. Our model circumvents the inherent difficulty of unsupervised signal disaggregation by using both the shape of a power spike and its temporal pattern to identify the contribution of CWH reliably. Indeed, many CHWs in France are configured to turn on automatically during off-peak hours only, and we are able to use this domain knowledge to aid peak identification despite the low sampling frequency. In order to test our model, we equipped a home with sensors to record the ground truth consumption of a water heater. We then apply the model to a larger dataset of energy consumption of Hello Watt users consisting of one month of consumption data for 5 k homes at 30-min resolution. In this dataset we successfully identified CWHs in 66.5% of cases where consumers declared using them. Inability of our model to identify CWHs in the consumption signal in the remaining cases is likely due to possible misconfiguration of CWHs, since triggering them during off-peak hours requires specific wiring in the electrical panel of the house. Our model, despite its simplicity, offers promising applications: detection of mis-configured CWHs on off-peak contracts and slow performance degradation.}
 }
