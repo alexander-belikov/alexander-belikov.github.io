@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>NER | Academic</title>
-    <link>https://alexander-belikov.github.io/tag/ner/</link>
-      <atom:link href="https://alexander-belikov.github.io/tag/ner/index.xml" rel="self" type="application/rss+xml" />
+    <title>NER | Alexander Belikov</title>
+    <link>alexander-belikov.github.io/tag/ner/</link>
+      <atom:link href="alexander-belikov.github.io/tag/ner/index.xml" rel="self" type="application/rss+xml" />
     <description>NER</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>Alexander Belikov, CR</copyright><lastBuildDate>Fri, 07 Jun 2019 22:42:21 +0100</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 07 Jun 2019 22:42:21 +0100</lastBuildDate>
     <image>
-      <url>https://alexander-belikov.github.io/images/icon_huf49b158b2681d286a60137da38ca7574_154815_512x512_fill_lanczos_center_3.png</url>
+      <url>/alexander-belikov.github.io/media/icon_huf49b158b2681d286a60137da38ca7574_154815_512x512_fill_lanczos_center_3.png</url>
       <title>NER</title>
-      <link>https://alexander-belikov.github.io/tag/ner/</link>
+      <link>alexander-belikov.github.io/tag/ner/</link>
     </image>
     
     <item>
       <title>Creating training data for scientific named entity recognition with minimal human effort</title>
-      <link>https://alexander-belikov.github.io/publication/2019-creating/</link>
+      <link>alexander-belikov.github.io/publication/2019-creating/</link>
       <pubDate>Fri, 07 Jun 2019 22:42:21 +0100</pubDate>
-      <guid>https://alexander-belikov.github.io/publication/2019-creating/</guid>
+      <guid>alexander-belikov.github.io/publication/2019-creating/</guid>
       <description></description>
     </item>
     

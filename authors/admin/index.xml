@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Alexander Belikov</title>
+    <link>alexander-belikov.github.io/authors/admin/</link>
+      <atom:link href="alexander-belikov.github.io/authors/admin/index.xml" rel="self" type="application/rss+xml" />
+    <description>Alexander Belikov</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 28 Apr 2022 22:34:19 +0100</lastBuildDate>
+    <image>
+      <url>/alexander-belikov.github.io/authors/admin/avatar_hufe2f9e2616f906de9b9b6caaf7c33563_542979_270x270_fill_q95_lanczos_center.jpg</url>
+      <title>Alexander Belikov</title>
+      <link>alexander-belikov.github.io/authors/admin/</link>
+    </image>
+    
+    <item>
+      <title>Prediction of robust scientific facts from literature</title>
+      <link>alexander-belikov.github.io/publication/2020-detecting/</link>
+      <pubDate>Thu, 28 Apr 2022 22:34:19 +0100</pubDate>
+      <guid>alexander-belikov.github.io/publication/2020-detecting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data on How Science Is Made Can Make Science Better</title>
+      <link>alexander-belikov.github.io/publication/2022-science/</link>
+      <pubDate>Thu, 28 Apr 2022 00:00:00 +0100</pubDate>
+      <guid>alexander-belikov.github.io/publication/2022-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Domain Knowledge Aids in Signal Disaggregation; the Example of the Cumulative Water Heater</title>
+      <link>alexander-belikov.github.io/publication/2022-hw-wh/</link>
+      <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>alexander-belikov.github.io/publication/2022-hw-wh/</guid>
+      <description>&lt;h1 id=&#34;supplementary-notes-can-be-added-here-including-code-math-and-imageshttpswowchemycomdocswriting-markdown-latex&#34;&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code, math, and images&lt;/a&gt;.&lt;/h1&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bayesian model of electrical heating disaggregation</title>
+      <link>alexander-belikov.github.io/publication/2020-hw-heating/</link>
+      <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>alexander-belikov.github.io/publication/2020-hw-heating/</guid>
+      <description>&lt;h1 id=&#34;supplementary-notes-can-be-added-here-including-code-math-and-imageshttpswowchemycomdocswriting-markdown-latex&#34;&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code, math, and images&lt;/a&gt;.&lt;/h1&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Graph Database | Academic</title>
-    <link>https://alexander-belikov.github.io/tag/graph-database/</link>
-      <atom:link href="https://alexander-belikov.github.io/tag/graph-database/index.xml" rel="self" type="application/rss+xml" />
-    <description>Graph Database</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>Alexander Belikov, CR</copyright><lastBuildDate>Sat, 04 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <title>graph database | Alexander Belikov</title>
+    <link>alexander-belikov.github.io/tag/graph-database/</link>
+      <atom:link href="alexander-belikov.github.io/tag/graph-database/index.xml" rel="self" type="application/rss+xml" />
+    <description>graph database</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 04 Sep 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://alexander-belikov.github.io/images/icon_huf49b158b2681d286a60137da38ca7574_154815_512x512_fill_lanczos_center_3.png</url>
-      <title>Graph Database</title>
-      <link>https://alexander-belikov.github.io/tag/graph-database/</link>
+      <url>/alexander-belikov.github.io/media/icon_huf49b158b2681d286a60137da38ca7574_154815_512x512_fill_lanczos_center_3.png</url>
+      <title>graph database</title>
+      <link>alexander-belikov.github.io/tag/graph-database/</link>
     </image>
     
     <item>
       <title>Pros and Cons of casting Web of Science into a graph database</title>
-      <link>https://alexander-belikov.github.io/post/2021-wos-arango-sql/</link>
+      <link>alexander-belikov.github.io/post/2021-wos-arango-sql/</link>
       <pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate>
-      <guid>https://alexander-belikov.github.io/post/2021-wos-arango-sql/</guid>
+      <guid>alexander-belikov.github.io/post/2021-wos-arango-sql/</guid>
       <description>&lt;p&gt;We live in an era of accelerating data generation. The sizes of datasets keep growing and so does their structure. Despite the continuously growing capacity of computers real-world datasets surpass the limits of in-memory processing of even larger commercially available computers, and so data manipulation and analysis has to be aided by the use of databases. Across multiple domains, notably sociology, most interesting phenomena tend to resemble graphs rather than tables.
 Graph databases, compared to their more established SQL counterparts, offer multiple advantages, due to a more natural representation of the data. Instead of tables, where each row contains a record with potentially empty fields, in graph databases, entities are vertices and relations between them are represented by edges. A well-known &lt;em&gt;join&lt;/em&gt; operation is represented as a loop over neighbouring vertices.&lt;/p&gt;
 &lt;p&gt;In this blogpost we describe how we set up MySQL and ArangoDB [1] databases on a subset of the Web of Science dataset [2] and designed and benchmarked sample queries during our tenure at Knowledge Lab [3].&lt;/p&gt;
@@ -166,12 +166,72 @@ MySQL was set up on a desktop with 64Gb of RAM. Ingestion took approximately 35 
 &lt;h3 id=&#34;arangodb-setting&#34;&gt;ArangoDB setting&lt;/h3&gt;
 &lt;p&gt;We used ArangoDB version 3.4, hosted on an Ubuntu 16.04 with 16Gb of ram.
 For arangodb each type of csv file (blue) was projected on one or more vertex collections (green). From the point of view of a graph database each encodes not only a node in a vertex collection (potentially non-unique), but also an edge (hopefully unique). The inherent difficulty is to create edges between correct vertices. For that we decide which fields are going to uniquely describe a document from a vertex collection. The ingestion process took approximately 12 hours. While for the SQL test ingestion the tables were simply loaded into a MySQL database, for the graph database we upserted the vertices, i.e. for each vertex &lt;em&gt;upsert&lt;/em&gt; we had to check if a vertex with the same index fields exists in the collection and retrieve its &lt;em&gt;id&lt;/em&gt; if it did.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./figs/wos_csv_source2vc.png&#34; alt=&#34;source2vc&#34;&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./figs/wos_csv_source2vc.png&#34; alt=&#34;source2vc&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
 &lt;p&gt;One of the crucial steps is to define the mappings of table columns onto field of vertex collection.
 Vertex collections contained the following fields (purple, with indices in boxed fields).&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./figs/wos_csv_vc2fields.png&#34; alt=&#34;source2vc&#34;&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./figs/wos_csv_vc2fields.png&#34; alt=&#34;source2vc&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
 &lt;p&gt;In order to insert edge instances, we first created edge collections as collections between vertex collections. Each document in an edge collection must contai two fields &lt;em&gt;_to&lt;/em&gt; and &lt;em&gt;_from&lt;/em&gt;, with corresponding values being the ids of the source and the target vertices.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./figs/wos_csv_vc2vc.png&#34; alt=&#34;source2vc&#34;&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./figs/wos_csv_vc2vc.png&#34; alt=&#34;source2vc&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
 &lt;p&gt;Please note the edge connecting &lt;em&gt;publication&lt;/em&gt; collection to itself, representing citations: both &lt;em&gt;wos_id&lt;/em&gt; and &lt;em&gt;uid&lt;/em&gt; have to be mapped to the same &lt;em&gt;id&lt;/em&gt; of the publication collection.&lt;/p&gt;
 &lt;p&gt;Our ingestion pipeline used &lt;code&gt;pyarango&lt;/code&gt; package and arango query language &lt;code&gt;aql&lt;/code&gt;.
 &lt;code&gt;pyarango&lt;/code&gt; provides an interfaces to a limited number of functions to manage ArangoDB, so certain steps were executed as &lt;code&gt;aql&lt;/code&gt; queries.&lt;/p&gt;
@@ -187,7 +247,27 @@ The ingestion process took approximately 12 hours, of which citation ingestion t
 &lt;li&gt;Given a subset of publications, compute the cardinality of the power set defined as papers cited by &lt;em&gt;p&lt;/em&gt;, papers that are cited by papers cited by &lt;em&gt;p&lt;/em&gt; and so on of order 5. Take the top 100 publications from Q4 with the highest ratio &lt;em&gt;z&lt;/em&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Below we plot query times in seconds as a function of the size of the restricting subset, where applicable. Red, solid lines correspond to ArangoDB, blue, dashed lines and star markers - to MySQL.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;./figs/queries_plot_times.png&#34; alt=&#34;source2vc&#34;&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./figs/queries_plot_times.png&#34; alt=&#34;source2vc&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
 &lt;p&gt;For Q1, the limit is on the number of journals.&lt;/p&gt;
 &lt;p&gt;For Q2 - on the number of publications.&lt;/p&gt;
 &lt;p&gt;For Q3 - on the number of contributors.&lt;/p&gt;
@@ -221,9 +301,9 @@ Nonetheless, we are able to conclude that:&lt;/p&gt;
     
     <item>
       <title>ArangoDB : case for graphs</title>
-      <link>https://alexander-belikov.github.io/talk/2021-arango/</link>
+      <link>alexander-belikov.github.io/event/arangodb-case-for-graphs/</link>
       <pubDate>Thu, 20 May 2021 17:00:00 +0000</pubDate>
-      <guid>https://alexander-belikov.github.io/talk/2021-arango/</guid>
+      <guid>alexander-belikov.github.io/event/arangodb-case-for-graphs/</guid>
       <description></description>
     </item>
     

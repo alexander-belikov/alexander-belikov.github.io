@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Debra J Audus | Alexander Belikov</title>
+    <link>alexander-belikov.github.io/authors/debra-j-audus/</link>
+      <atom:link href="alexander-belikov.github.io/authors/debra-j-audus/index.xml" rel="self" type="application/rss+xml" />
+    <description>Debra J Audus</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 07 Jun 2019 22:42:21 +0100</lastBuildDate>
+    <image>
+      <url>/alexander-belikov.github.io/media/icon_huf49b158b2681d286a60137da38ca7574_154815_512x512_fill_lanczos_center_3.png</url>
+      <title>Debra J Audus</title>
+      <link>alexander-belikov.github.io/authors/debra-j-audus/</link>
+    </image>
+    
+    <item>
+      <title>Creating training data for scientific named entity recognition with minimal human effort</title>
+      <link>alexander-belikov.github.io/publication/2019-creating/</link>
+      <pubDate>Fri, 07 Jun 2019 22:42:21 +0100</pubDate>
+      <guid>alexander-belikov.github.io/publication/2019-creating/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

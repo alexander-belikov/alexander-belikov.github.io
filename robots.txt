@@ -1,3 +1,3 @@
 User-agent: *
 
-Sitemap: https://alexander-belikov.github.io/sitemap.xml
+Sitemap: alexander-belikov.github.io/sitemap.xml

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Guillaume Matheron | Alexander Belikov</title>
+    <link>alexander-belikov.github.io/authors/guillaume-matheron/</link>
+      <atom:link href="alexander-belikov.github.io/authors/guillaume-matheron/index.xml" rel="self" type="application/rss+xml" />
+    <description>Guillaume Matheron</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 22 Mar 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/alexander-belikov.github.io/media/icon_huf49b158b2681d286a60137da38ca7574_154815_512x512_fill_lanczos_center_3.png</url>
+      <title>Guillaume Matheron</title>
+      <link>alexander-belikov.github.io/authors/guillaume-matheron/</link>
+    </image>
+    
+    <item>
+      <title>Domain Knowledge Aids in Signal Disaggregation; the Example of the Cumulative Water Heater</title>
+      <link>alexander-belikov.github.io/publication/2022-hw-wh/</link>
+      <pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>alexander-belikov.github.io/publication/2022-hw-wh/</guid>
+      <description>&lt;h1 id=&#34;supplementary-notes-can-be-added-here-including-code-math-and-imageshttpswowchemycomdocswriting-markdown-latex&#34;&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code, math, and images&lt;/a&gt;.&lt;/h1&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

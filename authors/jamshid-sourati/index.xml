@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jamshid Sourati | Alexander Belikov</title>
+    <link>alexander-belikov.github.io/authors/jamshid-sourati/</link>
+      <atom:link href="alexander-belikov.github.io/authors/jamshid-sourati/index.xml" rel="self" type="application/rss+xml" />
+    <description>Jamshid Sourati</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 28 Apr 2022 00:00:00 +0100</lastBuildDate>
+    <image>
+      <url>/alexander-belikov.github.io/media/icon_huf49b158b2681d286a60137da38ca7574_154815_512x512_fill_lanczos_center_3.png</url>
+      <title>Jamshid Sourati</title>
+      <link>alexander-belikov.github.io/authors/jamshid-sourati/</link>
+    </image>
+    
+    <item>
+      <title>Data on How Science Is Made Can Make Science Better</title>
+      <link>alexander-belikov.github.io/publication/2022-science/</link>
+      <pubDate>Thu, 28 Apr 2022 00:00:00 +0100</pubDate>
+      <guid>alexander-belikov.github.io/publication/2022-science/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
