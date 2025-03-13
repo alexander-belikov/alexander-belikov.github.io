@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>graph database | Alexander Belikov</title><link>https://alexander-belikov.github.io/tag/graph-database/</link><atom:link href="https://alexander-belikov.github.io/tag/graph-database/index.xml" rel="self" type="application/rss+xml"/><description>graph database</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 04 Sep 2021 00:00:00 +0000</lastBuildDate><image><url>https://alexander-belikov.github.io/media/icon_huf49b158b2681d286a60137da38ca7574_154815_512x512_fill_lanczos_center_3.png</url><title>graph database</title><link>https://alexander-belikov.github.io/tag/graph-database/</link></image><item><title>Pros and Cons of casting Web of Science into a graph database</title><link>https://alexander-belikov.github.io/post/2021-wos-arango-sql/</link><pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate><guid>https://alexander-belikov.github.io/post/2021-wos-arango-sql/</guid><description>&lt;p>We live in an era of accelerating data generation. The sizes of datasets keep growing and so does their structure. Despite the continuously growing capacity of computers real-world datasets surpass the limits of in-memory processing of even larger commercially available computers, and so data manipulation and analysis has to be aided by the use of databases. Across multiple domains, notably sociology, most interesting phenomena tend to resemble graphs rather than tables.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Graph Database | Alexander Belikov</title><link>https://alexander-belikov.github.io/tag/graph-database/</link><atom:link href="https://alexander-belikov.github.io/tag/graph-database/index.xml" rel="self" type="application/rss+xml"/><description>Graph Database</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 04 Sep 2021 00:00:00 +0000</lastBuildDate><image><url>https://alexander-belikov.github.io/media/icon_hu_d461787dfe962068.png</url><title>Graph Database</title><link>https://alexander-belikov.github.io/tag/graph-database/</link></image><item><title>Pros and Cons of casting Web of Science into a graph database</title><link>https://alexander-belikov.github.io/post/2021-wos-arango-sql/</link><pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate><guid>https://alexander-belikov.github.io/post/2021-wos-arango-sql/</guid><description>&lt;p>We live in an era of accelerating data generation. The sizes of datasets keep growing and so does their structure. Despite the continuously growing capacity of computers real-world datasets surpass the limits of in-memory processing of even larger commercially available computers, and so data manipulation and analysis has to be aided by the use of databases. Across multiple domains, notably sociology, most interesting phenomena tend to resemble graphs rather than tables.
 Graph databases, compared to their more established SQL counterparts, offer multiple advantages, due to a more natural representation of the data. Instead of tables, where each row contains a record with potentially empty fields, in graph databases, entities are vertices and relations between them are represented by edges. A well-known &lt;em>join&lt;/em> operation is represented as a loop over neighbouring vertices.&lt;/p>
 &lt;p>In this blogpost we describe how we set up MySQL and ArangoDB [1] databases on a subset of the Web of Science dataset [2] and designed and benchmarked sample queries during our tenure at Knowledge Lab [3].&lt;/p>
 &lt;h2 id="sample-dataset">Sample Dataset&lt;/h2>
@@ -17,42 +17,42 @@ To properly highlight the case for graph databases application (and to simplify 
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">wos_id&lt;/th>
-&lt;th style="text-align:left">issn&lt;/th>
-&lt;th style="text-align:left">title&lt;/th>
-&lt;th style="text-align:right">pubyear&lt;/th>
-&lt;th style="text-align:right">pubmonth&lt;/th>
-&lt;th style="text-align:left">language&lt;/th>
-&lt;th style="text-align:left">source&lt;/th>
+&lt;th style="text-align: left">wos_id&lt;/th>
+&lt;th style="text-align: left">issn&lt;/th>
+&lt;th style="text-align: left">title&lt;/th>
+&lt;th style="text-align: right">pubyear&lt;/th>
+&lt;th style="text-align: right">pubmonth&lt;/th>
+&lt;th style="text-align: left">language&lt;/th>
+&lt;th style="text-align: left">source&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">P1&lt;/td>
-&lt;td style="text-align:left">J1&lt;/td>
-&lt;td style="text-align:left">Title1&lt;/td>
-&lt;td style="text-align:right">1960&lt;/td>
-&lt;td style="text-align:right">1&lt;/td>
-&lt;td style="text-align:left">English&lt;/td>
-&lt;td style="text-align:left">CHILD DEVELOPMENT&lt;/td>
+&lt;td style="text-align: left">P1&lt;/td>
+&lt;td style="text-align: left">J1&lt;/td>
+&lt;td style="text-align: left">Title1&lt;/td>
+&lt;td style="text-align: right">1960&lt;/td>
+&lt;td style="text-align: right">1&lt;/td>
+&lt;td style="text-align: left">English&lt;/td>
+&lt;td style="text-align: left">CHILD DEVELOPMENT&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">P2&lt;/td>
-&lt;td style="text-align:left">J1&lt;/td>
-&lt;td style="text-align:left">Title2&lt;/td>
-&lt;td style="text-align:right">1962&lt;/td>
-&lt;td style="text-align:right">1&lt;/td>
-&lt;td style="text-align:left">English&lt;/td>
-&lt;td style="text-align:left">CHILD DEVELOPMENT&lt;/td>
+&lt;td style="text-align: left">P2&lt;/td>
+&lt;td style="text-align: left">J1&lt;/td>
+&lt;td style="text-align: left">Title2&lt;/td>
+&lt;td style="text-align: right">1962&lt;/td>
+&lt;td style="text-align: right">1&lt;/td>
+&lt;td style="text-align: left">English&lt;/td>
+&lt;td style="text-align: left">CHILD DEVELOPMENT&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">P3&lt;/td>
-&lt;td style="text-align:left">J1&lt;/td>
-&lt;td style="text-align:left">Title3&lt;/td>
-&lt;td style="text-align:right">1963&lt;/td>
-&lt;td style="text-align:right">1&lt;/td>
-&lt;td style="text-align:left">English&lt;/td>
-&lt;td style="text-align:left">CHILD DEVELOPMENT&lt;/td>
+&lt;td style="text-align: left">P3&lt;/td>
+&lt;td style="text-align: left">J1&lt;/td>
+&lt;td style="text-align: left">Title3&lt;/td>
+&lt;td style="text-align: right">1963&lt;/td>
+&lt;td style="text-align: right">1&lt;/td>
+&lt;td style="text-align: left">English&lt;/td>
+&lt;td style="text-align: left">CHILD DEVELOPMENT&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -60,30 +60,30 @@ To properly highlight the case for graph databases application (and to simplify 
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">wos_id&lt;/th>
-&lt;th style="text-align:right">position&lt;/th>
-&lt;th style="text-align:left">first_name&lt;/th>
-&lt;th style="text-align:left">last_name&lt;/th>
+&lt;th style="text-align: left">wos_id&lt;/th>
+&lt;th style="text-align: right">position&lt;/th>
+&lt;th style="text-align: left">first_name&lt;/th>
+&lt;th style="text-align: left">last_name&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">P1&lt;/td>
-&lt;td style="text-align:right">1&lt;/td>
-&lt;td style="text-align:left">A&lt;/td>
-&lt;td style="text-align:left">L1&lt;/td>
+&lt;td style="text-align: left">P1&lt;/td>
+&lt;td style="text-align: right">1&lt;/td>
+&lt;td style="text-align: left">A&lt;/td>
+&lt;td style="text-align: left">L1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">P1&lt;/td>
-&lt;td style="text-align:right">2&lt;/td>
-&lt;td style="text-align:left">A&lt;/td>
-&lt;td style="text-align:left">L2&lt;/td>
+&lt;td style="text-align: left">P1&lt;/td>
+&lt;td style="text-align: right">2&lt;/td>
+&lt;td style="text-align: left">A&lt;/td>
+&lt;td style="text-align: left">L2&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">P2&lt;/td>
-&lt;td style="text-align:right">1&lt;/td>
-&lt;td style="text-align:left">A&lt;/td>
-&lt;td style="text-align:left">L3&lt;/td>
+&lt;td style="text-align: left">P2&lt;/td>
+&lt;td style="text-align: right">1&lt;/td>
+&lt;td style="text-align: left">A&lt;/td>
+&lt;td style="text-align: left">L3&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -91,30 +91,30 @@ To properly highlight the case for graph databases application (and to simplify 
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">wos_id&lt;/th>
-&lt;th style="text-align:left">organization&lt;/th>
-&lt;th style="text-align:left">country&lt;/th>
-&lt;th style="text-align:left">city&lt;/th>
+&lt;th style="text-align: left">wos_id&lt;/th>
+&lt;th style="text-align: left">organization&lt;/th>
+&lt;th style="text-align: left">country&lt;/th>
+&lt;th style="text-align: left">city&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">P1&lt;/td>
-&lt;td style="text-align:left">O1&lt;/td>
-&lt;td style="text-align:left">Switzerland&lt;/td>
-&lt;td style="text-align:left">Geneva&lt;/td>
+&lt;td style="text-align: left">P1&lt;/td>
+&lt;td style="text-align: left">O1&lt;/td>
+&lt;td style="text-align: left">Switzerland&lt;/td>
+&lt;td style="text-align: left">Geneva&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">P2&lt;/td>
-&lt;td style="text-align:left">O1&lt;/td>
-&lt;td style="text-align:left">Switzerland&lt;/td>
-&lt;td style="text-align:left">Geneva&lt;/td>
+&lt;td style="text-align: left">P2&lt;/td>
+&lt;td style="text-align: left">O1&lt;/td>
+&lt;td style="text-align: left">Switzerland&lt;/td>
+&lt;td style="text-align: left">Geneva&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">P3&lt;/td>
-&lt;td style="text-align:left">O1&lt;/td>
-&lt;td style="text-align:left">Switzerland&lt;/td>
-&lt;td style="text-align:left">Geneva&lt;/td>
+&lt;td style="text-align: left">P3&lt;/td>
+&lt;td style="text-align: left">O1&lt;/td>
+&lt;td style="text-align: left">Switzerland&lt;/td>
+&lt;td style="text-align: left">Geneva&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -122,22 +122,22 @@ To properly highlight the case for graph databases application (and to simplify 
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align:left">wos_id&lt;/th>
-&lt;th style="text-align:left">uid&lt;/th>
+&lt;th style="text-align: left">wos_id&lt;/th>
+&lt;th style="text-align: left">uid&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:left">P8&lt;/td>
-&lt;td style="text-align:left">P1&lt;/td>
+&lt;td style="text-align: left">P8&lt;/td>
+&lt;td style="text-align: left">P1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">P8&lt;/td>
-&lt;td style="text-align:left">P2&lt;/td>
+&lt;td style="text-align: left">P8&lt;/td>
+&lt;td style="text-align: left">P2&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align:left">P7&lt;/td>
-&lt;td style="text-align:left">P4&lt;/td>
+&lt;td style="text-align: left">P7&lt;/td>
+&lt;td style="text-align: left">P4&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
