@@ -1,334 +1,334 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Alexander Belikov</title><link>https://alexander-belikov.github.io/</link><atom:link href="https://alexander-belikov.github.io/index.xml" rel="self" type="application/rss+xml"/><description>Alexander Belikov</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate><image><url>https://alexander-belikov.github.io/media/icon_hu_d461787dfe962068.png</url><title>Alexander Belikov</title><link>https://alexander-belikov.github.io/</link></image><item><title>Integrating Knowledge Graphs into the Debian Ecosystem</title><link>https://alexander-belikov.github.io/event/integrating-knowledge-graphs-into-the-debian-ecosystem/</link><pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate><guid>https://alexander-belikov.github.io/event/integrating-knowledge-graphs-into-the-debian-ecosystem/</guid><description/></item><item><title>Optimizing Research Portfolio For Semantic Impact</title><link>https://alexander-belikov.github.io/publication/2025-xsi/</link><pubDate>Mon, 10 Mar 2025 00:00:00 +0100</pubDate><guid>https://alexander-belikov.github.io/publication/2025-xsi/</guid><description/></item><item><title>Knowledge Graphs Construction from Criminal Court Appeals: Insights from the French Cassation Court</title><link>https://alexander-belikov.github.io/publication/2025-appeals/</link><pubDate>Tue, 28 Jan 2025 00:00:00 +0100</pubDate><guid>https://alexander-belikov.github.io/publication/2025-appeals/</guid><description/></item><item><title>Quantifying Scientiﬁc Discovery to Improve the Knowledge of Facts</title><link>https://alexander-belikov.github.io/event/quantifying-scienti%EF%AC%81c-discovery-to-improve-the-knowledge-of-facts/</link><pubDate>Thu, 15 Dec 2022 00:00:00 +0000</pubDate><guid>https://alexander-belikov.github.io/event/quantifying-scienti%EF%AC%81c-discovery-to-improve-the-knowledge-of-facts/</guid><description/></item><item><title>Quantification of Scientific Discovery Process Implies Better Science</title><link>https://alexander-belikov.github.io/event/quantification-of-scientific-discovery-process-implies-better-science/</link><pubDate>Fri, 09 Sep 2022 00:00:00 +0000</pubDate><guid>https://alexander-belikov.github.io/event/quantification-of-scientific-discovery-process-implies-better-science/</guid><description/></item><item><title>Knowledge Graph driven Discovery</title><link>https://alexander-belikov.github.io/event/knowledge-graph-driven-discovery/</link><pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate><guid>https://alexander-belikov.github.io/event/knowledge-graph-driven-discovery/</guid><description/></item><item><title>Prediction of robust scientific facts from literature</title><link>https://alexander-belikov.github.io/publication/2020-detecting/</link><pubDate>Thu, 28 Apr 2022 22:34:19 +0100</pubDate><guid>https://alexander-belikov.github.io/publication/2020-detecting/</guid><description/></item><item><title>Data on How Science Is Made Can Make Science Better</title><link>https://alexander-belikov.github.io/publication/2022-science/</link><pubDate>Thu, 28 Apr 2022 00:00:00 +0100</pubDate><guid>https://alexander-belikov.github.io/publication/2022-science/</guid><description/></item><item><title>Domain Knowledge Aids in Signal Disaggregation; the Example of the Cumulative Water Heater</title><link>https://alexander-belikov.github.io/publication/2022-hw-wh/</link><pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate><guid>https://alexander-belikov.github.io/publication/2022-hw-wh/</guid><description>&lt;h1 id="supplementary-notes-can-be-added-here-including-code-math-and-images">Supplementary notes can be added here, including &lt;a href="https://wowchemy.com/docs/writing-markdown-latex/" target="_blank" rel="noopener">code, math, and images&lt;/a>.&lt;/h1></description></item><item><title>Pros and Cons of casting Web of Science into a graph database</title><link>https://alexander-belikov.github.io/post/2021-wos-arango-sql/</link><pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate><guid>https://alexander-belikov.github.io/post/2021-wos-arango-sql/</guid><description>&lt;p>We live in an era of accelerating data generation. The sizes of datasets keep growing and so does their structure. Despite the continuously growing capacity of computers real-world datasets surpass the limits of in-memory processing of even larger commercially available computers, and so data manipulation and analysis has to be aided by the use of databases. Across multiple domains, notably sociology, most interesting phenomena tend to resemble graphs rather than tables.
-Graph databases, compared to their more established SQL counterparts, offer multiple advantages, due to a more natural representation of the data. Instead of tables, where each row contains a record with potentially empty fields, in graph databases, entities are vertices and relations between them are represented by edges. A well-known &lt;em>join&lt;/em> operation is represented as a loop over neighbouring vertices.&lt;/p>
-&lt;p>In this blogpost we describe how we set up MySQL and ArangoDB [1] databases on a subset of the Web of Science dataset [2] and designed and benchmarked sample queries during our tenure at Knowledge Lab [3].&lt;/p>
-&lt;h2 id="sample-dataset">Sample Dataset&lt;/h2>
-&lt;p>Web of Science (WoS) is one of the most complete academic datasets produced by Clarivate Analytics (previously by Thomson Reuters). As of 2017 it covered 12K journals and 160K conference proceedings. It contains publication records including authors, affiliations, references, abstracts etc.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Alexander Belikov</title><link>https://alexander-belikov.github.io/</link><atom:link href="https://alexander-belikov.github.io/index.xml" rel="self" type="application/rss+xml"/><description>Alexander Belikov</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate><image><url>https://alexander-belikov.github.io/media/icon_hu_d461787dfe962068.png</url><title>Alexander Belikov</title><link>https://alexander-belikov.github.io/</link></image><item><title>Transforming Data into Property Graphs with Graflo, Neo4j &amp; ArangoDB</title><link>https://alexander-belikov.github.io/event/transforming-data-into-property-graphs-with-graflo-neo4j-arangodb/</link><pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate><guid>https://alexander-belikov.github.io/event/transforming-data-into-property-graphs-with-graflo-neo4j-arangodb/</guid><description/></item><item><title>Integrating Knowledge Graphs into the Debian Ecosystem</title><link>https://alexander-belikov.github.io/event/integrating-knowledge-graphs-into-the-debian-ecosystem/</link><pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate><guid>https://alexander-belikov.github.io/event/integrating-knowledge-graphs-into-the-debian-ecosystem/</guid><description/></item><item><title>Optimizing Research Portfolio For Semantic Impact</title><link>https://alexander-belikov.github.io/publication/2025-xsi/</link><pubDate>Mon, 10 Mar 2025 00:00:00 +0100</pubDate><guid>https://alexander-belikov.github.io/publication/2025-xsi/</guid><description/></item><item><title>Knowledge Graphs Construction from Criminal Court Appeals: Insights from the French Cassation Court</title><link>https://alexander-belikov.github.io/publication/2025-appeals/</link><pubDate>Tue, 28 Jan 2025 00:00:00 +0100</pubDate><guid>https://alexander-belikov.github.io/publication/2025-appeals/</guid><description/></item><item><title>Quantifying Scientiﬁc Discovery to Improve the Knowledge of Facts</title><link>https://alexander-belikov.github.io/event/quantifying-scienti%EF%AC%81c-discovery-to-improve-the-knowledge-of-facts/</link><pubDate>Thu, 15 Dec 2022 00:00:00 +0000</pubDate><guid>https://alexander-belikov.github.io/event/quantifying-scienti%EF%AC%81c-discovery-to-improve-the-knowledge-of-facts/</guid><description/></item><item><title>Quantification of Scientific Discovery Process Implies Better Science</title><link>https://alexander-belikov.github.io/event/quantification-of-scientific-discovery-process-implies-better-science/</link><pubDate>Fri, 09 Sep 2022 00:00:00 +0000</pubDate><guid>https://alexander-belikov.github.io/event/quantification-of-scientific-discovery-process-implies-better-science/</guid><description/></item><item><title>Knowledge Graph driven Discovery</title><link>https://alexander-belikov.github.io/event/knowledge-graph-driven-discovery/</link><pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate><guid>https://alexander-belikov.github.io/event/knowledge-graph-driven-discovery/</guid><description/></item><item><title>Prediction of robust scientific facts from literature</title><link>https://alexander-belikov.github.io/publication/2020-detecting/</link><pubDate>Thu, 28 Apr 2022 22:34:19 +0100</pubDate><guid>https://alexander-belikov.github.io/publication/2020-detecting/</guid><description/></item><item><title>Data on How Science Is Made Can Make Science Better</title><link>https://alexander-belikov.github.io/publication/2022-science/</link><pubDate>Thu, 28 Apr 2022 00:00:00 +0100</pubDate><guid>https://alexander-belikov.github.io/publication/2022-science/</guid><description/></item><item><title>Domain Knowledge Aids in Signal Disaggregation; the Example of the Cumulative Water Heater</title><link>https://alexander-belikov.github.io/publication/2022-hw-wh/</link><pubDate>Tue, 22 Mar 2022 00:00:00 +0000</pubDate><guid>https://alexander-belikov.github.io/publication/2022-hw-wh/</guid><description>&lt;h1 id="supplementary-notes-can-be-added-here-including-code-math-and-images"&gt;Supplementary notes can be added here, including &lt;a href="https://wowchemy.com/docs/writing-markdown-latex/" target="_blank" rel="noopener"&gt;code, math, and images&lt;/a&gt;.&lt;/h1&gt;</description></item><item><title>Pros and Cons of casting Web of Science into a graph database</title><link>https://alexander-belikov.github.io/post/2021-wos-arango-sql/</link><pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate><guid>https://alexander-belikov.github.io/post/2021-wos-arango-sql/</guid><description>&lt;p&gt;We live in an era of accelerating data generation. The sizes of datasets keep growing and so does their structure. Despite the continuously growing capacity of computers real-world datasets surpass the limits of in-memory processing of even larger commercially available computers, and so data manipulation and analysis has to be aided by the use of databases. Across multiple domains, notably sociology, most interesting phenomena tend to resemble graphs rather than tables.
+Graph databases, compared to their more established SQL counterparts, offer multiple advantages, due to a more natural representation of the data. Instead of tables, where each row contains a record with potentially empty fields, in graph databases, entities are vertices and relations between them are represented by edges. A well-known &lt;em&gt;join&lt;/em&gt; operation is represented as a loop over neighbouring vertices.&lt;/p&gt;
+&lt;p&gt;In this blogpost we describe how we set up MySQL and ArangoDB [1] databases on a subset of the Web of Science dataset [2] and designed and benchmarked sample queries during our tenure at Knowledge Lab [3].&lt;/p&gt;
+&lt;h2 id="sample-dataset"&gt;Sample Dataset&lt;/h2&gt;
+&lt;p&gt;Web of Science (WoS) is one of the most complete academic datasets produced by Clarivate Analytics (previously by Thomson Reuters). As of 2017 it covered 12K journals and 160K conference proceedings. It contains publication records including authors, affiliations, references, abstracts etc.
 For our test we took a subset of available records published between 1971 and 1980.
-To properly highlight the case for graph databases application (and to simplify ingestion scripts) for each record we retrieved and cast the WoS dataset (originally in XML form) as csv-files containing certain relations:&lt;/p>
-&lt;ul>
-&lt;li>publications (publication metadata, contains journal information)&lt;/li>
-&lt;li>institutions (affiliation data)&lt;/li>
-&lt;li>contributors (author data)&lt;/li>
-&lt;li>refs (citation data)&lt;/li>
-&lt;/ul>
-&lt;p>As a results we ended up with 5.87M unique publications, 12.3M rows in contributors, 68.7M rows in refs, 163K rows in institutions (affiliation data coverage seems to be incomplete).&lt;/p>
-&lt;p>Below are examples of different types of intermediate tables:&lt;/p>
-&lt;p>&lt;strong>Publications&lt;/strong>&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th style="text-align: left">wos_id&lt;/th>
-&lt;th style="text-align: left">issn&lt;/th>
-&lt;th style="text-align: left">title&lt;/th>
-&lt;th style="text-align: right">pubyear&lt;/th>
-&lt;th style="text-align: right">pubmonth&lt;/th>
-&lt;th style="text-align: left">language&lt;/th>
-&lt;th style="text-align: left">source&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td style="text-align: left">P1&lt;/td>
-&lt;td style="text-align: left">J1&lt;/td>
-&lt;td style="text-align: left">Title1&lt;/td>
-&lt;td style="text-align: right">1960&lt;/td>
-&lt;td style="text-align: right">1&lt;/td>
-&lt;td style="text-align: left">English&lt;/td>
-&lt;td style="text-align: left">CHILD DEVELOPMENT&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">P2&lt;/td>
-&lt;td style="text-align: left">J1&lt;/td>
-&lt;td style="text-align: left">Title2&lt;/td>
-&lt;td style="text-align: right">1962&lt;/td>
-&lt;td style="text-align: right">1&lt;/td>
-&lt;td style="text-align: left">English&lt;/td>
-&lt;td style="text-align: left">CHILD DEVELOPMENT&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">P3&lt;/td>
-&lt;td style="text-align: left">J1&lt;/td>
-&lt;td style="text-align: left">Title3&lt;/td>
-&lt;td style="text-align: right">1963&lt;/td>
-&lt;td style="text-align: right">1&lt;/td>
-&lt;td style="text-align: left">English&lt;/td>
-&lt;td style="text-align: left">CHILD DEVELOPMENT&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;p>&lt;strong>Contributors&lt;/strong>&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th style="text-align: left">wos_id&lt;/th>
-&lt;th style="text-align: right">position&lt;/th>
-&lt;th style="text-align: left">first_name&lt;/th>
-&lt;th style="text-align: left">last_name&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td style="text-align: left">P1&lt;/td>
-&lt;td style="text-align: right">1&lt;/td>
-&lt;td style="text-align: left">A&lt;/td>
-&lt;td style="text-align: left">L1&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">P1&lt;/td>
-&lt;td style="text-align: right">2&lt;/td>
-&lt;td style="text-align: left">A&lt;/td>
-&lt;td style="text-align: left">L2&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">P2&lt;/td>
-&lt;td style="text-align: right">1&lt;/td>
-&lt;td style="text-align: left">A&lt;/td>
-&lt;td style="text-align: left">L3&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;p>&lt;strong>Institutions&lt;/strong>&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th style="text-align: left">wos_id&lt;/th>
-&lt;th style="text-align: left">organization&lt;/th>
-&lt;th style="text-align: left">country&lt;/th>
-&lt;th style="text-align: left">city&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td style="text-align: left">P1&lt;/td>
-&lt;td style="text-align: left">O1&lt;/td>
-&lt;td style="text-align: left">Switzerland&lt;/td>
-&lt;td style="text-align: left">Geneva&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">P2&lt;/td>
-&lt;td style="text-align: left">O1&lt;/td>
-&lt;td style="text-align: left">Switzerland&lt;/td>
-&lt;td style="text-align: left">Geneva&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">P3&lt;/td>
-&lt;td style="text-align: left">O1&lt;/td>
-&lt;td style="text-align: left">Switzerland&lt;/td>
-&lt;td style="text-align: left">Geneva&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;p>&lt;strong>References&lt;/strong>&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th style="text-align: left">wos_id&lt;/th>
-&lt;th style="text-align: left">uid&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td style="text-align: left">P8&lt;/td>
-&lt;td style="text-align: left">P1&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">P8&lt;/td>
-&lt;td style="text-align: left">P2&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align: left">P7&lt;/td>
-&lt;td style="text-align: left">P4&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h3 id="mysql-setting">MySQL setting&lt;/h3>
-&lt;p>CSV files were directly loaded into MySQL database and corresponding indices were created.
-MySQL was set up on a desktop with 64Gb of RAM. Ingestion took approximately 35 minutes.&lt;/p>
-&lt;h3 id="arangodb-setting">ArangoDB setting&lt;/h3>
-&lt;p>We used ArangoDB version 3.4, hosted on an Ubuntu 16.04 with 16Gb of ram.
-For arangodb each type of csv file (blue) was projected on one or more vertex collections (green). From the point of view of a graph database each encodes not only a node in a vertex collection (potentially non-unique), but also an edge (hopefully unique). The inherent difficulty is to create edges between correct vertices. For that we decide which fields are going to uniquely describe a document from a vertex collection. The ingestion process took approximately 12 hours. While for the SQL test ingestion the tables were simply loaded into a MySQL database, for the graph database we upserted the vertices, i.e. for each vertex &lt;em>upsert&lt;/em> we had to check if a vertex with the same index fields exists in the collection and retrieve its &lt;em>id&lt;/em> if it did.&lt;/p>
-&lt;p>
-&lt;figure >
-&lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img src="./figs/wos_csv_source2vc.png" alt="source2vc" loading="lazy" data-zoomable />&lt;/div>
-&lt;/div>&lt;/figure>
-&lt;/p>
-&lt;p>One of the crucial steps is to define the mappings of table columns onto field of vertex collection.
-Vertex collections contained the following fields (purple, with indices in boxed fields).&lt;/p>
-&lt;p>
-&lt;figure >
-&lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img src="./figs/wos_csv_vc2fields.png" alt="source2vc" loading="lazy" data-zoomable />&lt;/div>
-&lt;/div>&lt;/figure>
-&lt;/p>
-&lt;p>In order to insert edge instances, we first created edge collections as collections between vertex collections. Each document in an edge collection must contai two fields &lt;em>_to&lt;/em> and &lt;em>_from&lt;/em>, with corresponding values being the ids of the source and the target vertices.&lt;/p>
-&lt;p>
-&lt;figure >
-&lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img src="./figs/wos_csv_vc2vc.png" alt="source2vc" loading="lazy" data-zoomable />&lt;/div>
-&lt;/div>&lt;/figure>
-&lt;/p>
-&lt;p>Please note the edge connecting &lt;em>publication&lt;/em> collection to itself, representing citations: both &lt;em>wos_id&lt;/em> and &lt;em>uid&lt;/em> have to be mapped to the same &lt;em>id&lt;/em> of the publication collection.&lt;/p>
-&lt;p>Our ingestion pipeline used &lt;code>pyarango&lt;/code> package and arango query language &lt;code>aql&lt;/code>.
-&lt;code>pyarango&lt;/code> provides an interfaces to a limited number of functions to manage ArangoDB, so certain steps were executed as &lt;code>aql&lt;/code> queries.&lt;/p>
-&lt;p>De-duplication of existing documents (documents are considered identical if defining fields, which were also indexed upon, are the same, grey boxes in the figure above) was part of the ingestion process (see upsert).
-The ingestion process took approximately 12 hours, of which citation ingestion took about 8.&lt;/p>
-&lt;h3 id="queries">Queries&lt;/h3>
-&lt;ol>
-&lt;li>Calculate number of publications per journal for 1978 and return in descending order.&lt;/li>
-&lt;li>Return 1000 most popular words (minus stop words) from all available titles.&lt;/li>
-&lt;li>Find authors who changed their country more than twice.&lt;/li>
-&lt;li>For a given publication &lt;em>p&lt;/em> compute the ratio &lt;em>z&lt;/em> of number of second order neighbors to first order neighbors in the directed network of citations.&lt;/li>
-&lt;li>Count the number of times publications from journal &lt;em>j&lt;/em> published in 1978 cite publications in journal &lt;em>j’&lt;/em> published in the previous 5 years.&lt;/li>
-&lt;li>Given a subset of publications, compute the cardinality of the power set defined as papers cited by &lt;em>p&lt;/em>, papers that are cited by papers cited by &lt;em>p&lt;/em> and so on of order 5. Take the top 100 publications from Q4 with the highest ratio &lt;em>z&lt;/em>.&lt;/li>
-&lt;/ol>
-&lt;p>Below we plot query times in seconds as a function of the size of the restricting subset, where applicable. Red, solid lines correspond to ArangoDB, blue, dashed lines and star markers - to MySQL.&lt;/p>
-&lt;p>
-&lt;figure >
-&lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img src="./figs/queries_plot_times.png" alt="source2vc" loading="lazy" data-zoomable />&lt;/div>
-&lt;/div>&lt;/figure>
-&lt;/p>
-&lt;p>For Q1, the limit is on the number of journals.&lt;/p>
-&lt;p>For Q2 - on the number of publications.&lt;/p>
-&lt;p>For Q3 - on the number of contributors.&lt;/p>
-&lt;p>For Q4 - on the number of publications.&lt;/p>
-&lt;p>For Q5 - on both the number of journals which are citing and which are being cited, so the for limit size N, the result is an NxN matrix. We note that Q5 essentially represents Eigenfactor [3] computation.&lt;/p>
-&lt;p>For Q6 - on the number of source publications.&lt;/p>
-&lt;p>Arango queries can be found &lt;a href="https://github.com/alexander-belikov/wos_db_studies/blob/master/run/queries.py" target="_blank" rel="noopener">wos_db_studies/run/queries&lt;/a>&lt;/p>
-&lt;p>SQL queries can be found
-&lt;a href="https://github.com/brendanchambers/wos_db_benchmark/tree/master/benchmarking" target="_blank" rel="noopener">wos_db_benchmark/benchmarking&lt;/a>&lt;/p>
-&lt;p>While our MySQL is less complete than that of ArangoDB (the results from Q2-Q4 were close to identical), where applicable the comparison reveals that MySQL shines where expected - in linear queries, such as looping over titles and does not do so well in graph-oriented tasks. Notably the results from ArangoDB for queries 3 and 4 surpass MySQL results by almost two orders of magnitude (!).&lt;/p>
-&lt;h3 id="conclusion">Conclusion&lt;/h3>
-&lt;p>The choice of schemas, the details of index definitions and computer hardware all contribute to the uncertainty of our results.&lt;br>
-Nonetheless, we are able to conclude that:&lt;/p>
-&lt;ul>
-&lt;li>ArangoDB is a robust and well-supported database with excellent documentation (however, the learning curve might be steep compared to MySQL)&lt;/li>
-&lt;li>Ingestion time for ArangoDB is greater than that for the MySQL counterpart&lt;/li>
-&lt;li>ArangoDB beats MySQL on graph-oriented queries&lt;/li>
-&lt;li>&lt;em>AQL&lt;/em> is expressive with respect to graph-specific queries&lt;/li>
-&lt;/ul>
-&lt;h3 id="references">References&lt;/h3>
-&lt;ol>
-&lt;li>&lt;a href="https://www.arangodb.com/" target="_blank" rel="noopener">https://www.arangodb.com/&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://en.wikipedia.org/wiki/Web_of_Science" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Web_of_Science&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://www.knowledgelab.org/" target="_blank" rel="noopener">https://www.knowledgelab.org/&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://www.eigenfactor.org/" target="_blank" rel="noopener">http://www.eigenfactor.org/&lt;/a>&lt;/li>
-&lt;/ol>
-&lt;h3 id="acknowledgements">Acknowledgements&lt;/h3>
-&lt;p>Prepared with the help of Brendan Chambers.&lt;/p></description></item><item><title>ArangoDB : case for graphs</title><link>https://alexander-belikov.github.io/event/arangodb-case-for-graphs/</link><pubDate>Thu, 20 May 2021 17:00:00 +0000</pubDate><guid>https://alexander-belikov.github.io/event/arangodb-case-for-graphs/</guid><description/></item><item><title>Bayesian model of electrical heating disaggregation</title><link>https://alexander-belikov.github.io/publication/2020-hw-heating/</link><pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate><guid>https://alexander-belikov.github.io/publication/2020-hw-heating/</guid><description>&lt;h1 id="supplementary-notes-can-be-added-here-including-code-math-and-images">Supplementary notes can be added here, including &lt;a href="https://wowchemy.com/docs/writing-markdown-latex/" target="_blank" rel="noopener">code, math, and images&lt;/a>.&lt;/h1></description></item><item><title>Creating training data for scientific named entity recognition with minimal human effort</title><link>https://alexander-belikov.github.io/publication/2019-creating/</link><pubDate>Fri, 07 Jun 2019 22:42:21 +0100</pubDate><guid>https://alexander-belikov.github.io/publication/2019-creating/</guid><description/></item><item><title>Slides</title><link>https://alexander-belikov.github.io/slides/example/</link><pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate><guid>https://alexander-belikov.github.io/slides/example/</guid><description>&lt;h1 id="create-slides-in-markdown-with-wowchemy">Create slides in Markdown with Wowchemy&lt;/h1>
-&lt;p>&lt;a href="https://wowchemy.com/" target="_blank" rel="noopener">Wowchemy&lt;/a> | &lt;a href="https://wowchemy.com/docs/content/slides/" target="_blank" rel="noopener">Documentation&lt;/a>&lt;/p>
-&lt;hr>
-&lt;h2 id="features">Features&lt;/h2>
-&lt;ul>
-&lt;li>Efficiently write slides in Markdown&lt;/li>
-&lt;li>3-in-1: Create, Present, and Publish your slides&lt;/li>
-&lt;li>Supports speaker notes&lt;/li>
-&lt;li>Mobile friendly slides&lt;/li>
-&lt;/ul>
-&lt;hr>
-&lt;h2 id="controls">Controls&lt;/h2>
-&lt;ul>
-&lt;li>Next: &lt;code>Right Arrow&lt;/code> or &lt;code>Space&lt;/code>&lt;/li>
-&lt;li>Previous: &lt;code>Left Arrow&lt;/code>&lt;/li>
-&lt;li>Start: &lt;code>Home&lt;/code>&lt;/li>
-&lt;li>Finish: &lt;code>End&lt;/code>&lt;/li>
-&lt;li>Overview: &lt;code>Esc&lt;/code>&lt;/li>
-&lt;li>Speaker notes: &lt;code>S&lt;/code>&lt;/li>
-&lt;li>Fullscreen: &lt;code>F&lt;/code>&lt;/li>
-&lt;li>Zoom: &lt;code>Alt + Click&lt;/code>&lt;/li>
-&lt;li>&lt;a href="https://revealjs.com/pdf-export/" target="_blank" rel="noopener">PDF Export&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;hr>
-&lt;h2 id="code-highlighting">Code Highlighting&lt;/h2>
-&lt;p>Inline code: &lt;code>variable&lt;/code>&lt;/p>
-&lt;p>Code block:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="n">porridge&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;blueberry&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="n">porridge&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s2">&amp;#34;blueberry&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;Eating...&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
-&lt;h2 id="math">Math&lt;/h2>
-&lt;p>In-line math: $x + y = z$&lt;/p>
-&lt;p>Block math:&lt;/p>
-&lt;p>$$
+To properly highlight the case for graph databases application (and to simplify ingestion scripts) for each record we retrieved and cast the WoS dataset (originally in XML form) as csv-files containing certain relations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;publications (publication metadata, contains journal information)&lt;/li&gt;
+&lt;li&gt;institutions (affiliation data)&lt;/li&gt;
+&lt;li&gt;contributors (author data)&lt;/li&gt;
+&lt;li&gt;refs (citation data)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As a results we ended up with 5.87M unique publications, 12.3M rows in contributors, 68.7M rows in refs, 163K rows in institutions (affiliation data coverage seems to be incomplete).&lt;/p&gt;
+&lt;p&gt;Below are examples of different types of intermediate tables:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Publications&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align: left"&gt;wos_id&lt;/th&gt;
+&lt;th style="text-align: left"&gt;issn&lt;/th&gt;
+&lt;th style="text-align: left"&gt;title&lt;/th&gt;
+&lt;th style="text-align: right"&gt;pubyear&lt;/th&gt;
+&lt;th style="text-align: right"&gt;pubmonth&lt;/th&gt;
+&lt;th style="text-align: left"&gt;language&lt;/th&gt;
+&lt;th style="text-align: left"&gt;source&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;P1&lt;/td&gt;
+&lt;td style="text-align: left"&gt;J1&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Title1&lt;/td&gt;
+&lt;td style="text-align: right"&gt;1960&lt;/td&gt;
+&lt;td style="text-align: right"&gt;1&lt;/td&gt;
+&lt;td style="text-align: left"&gt;English&lt;/td&gt;
+&lt;td style="text-align: left"&gt;CHILD DEVELOPMENT&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;P2&lt;/td&gt;
+&lt;td style="text-align: left"&gt;J1&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Title2&lt;/td&gt;
+&lt;td style="text-align: right"&gt;1962&lt;/td&gt;
+&lt;td style="text-align: right"&gt;1&lt;/td&gt;
+&lt;td style="text-align: left"&gt;English&lt;/td&gt;
+&lt;td style="text-align: left"&gt;CHILD DEVELOPMENT&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;P3&lt;/td&gt;
+&lt;td style="text-align: left"&gt;J1&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Title3&lt;/td&gt;
+&lt;td style="text-align: right"&gt;1963&lt;/td&gt;
+&lt;td style="text-align: right"&gt;1&lt;/td&gt;
+&lt;td style="text-align: left"&gt;English&lt;/td&gt;
+&lt;td style="text-align: left"&gt;CHILD DEVELOPMENT&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Contributors&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align: left"&gt;wos_id&lt;/th&gt;
+&lt;th style="text-align: right"&gt;position&lt;/th&gt;
+&lt;th style="text-align: left"&gt;first_name&lt;/th&gt;
+&lt;th style="text-align: left"&gt;last_name&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;P1&lt;/td&gt;
+&lt;td style="text-align: right"&gt;1&lt;/td&gt;
+&lt;td style="text-align: left"&gt;A&lt;/td&gt;
+&lt;td style="text-align: left"&gt;L1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;P1&lt;/td&gt;
+&lt;td style="text-align: right"&gt;2&lt;/td&gt;
+&lt;td style="text-align: left"&gt;A&lt;/td&gt;
+&lt;td style="text-align: left"&gt;L2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;P2&lt;/td&gt;
+&lt;td style="text-align: right"&gt;1&lt;/td&gt;
+&lt;td style="text-align: left"&gt;A&lt;/td&gt;
+&lt;td style="text-align: left"&gt;L3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Institutions&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align: left"&gt;wos_id&lt;/th&gt;
+&lt;th style="text-align: left"&gt;organization&lt;/th&gt;
+&lt;th style="text-align: left"&gt;country&lt;/th&gt;
+&lt;th style="text-align: left"&gt;city&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;P1&lt;/td&gt;
+&lt;td style="text-align: left"&gt;O1&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Switzerland&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Geneva&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;P2&lt;/td&gt;
+&lt;td style="text-align: left"&gt;O1&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Switzerland&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Geneva&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;P3&lt;/td&gt;
+&lt;td style="text-align: left"&gt;O1&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Switzerland&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Geneva&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align: left"&gt;wos_id&lt;/th&gt;
+&lt;th style="text-align: left"&gt;uid&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;P8&lt;/td&gt;
+&lt;td style="text-align: left"&gt;P1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;P8&lt;/td&gt;
+&lt;td style="text-align: left"&gt;P2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;P7&lt;/td&gt;
+&lt;td style="text-align: left"&gt;P4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="mysql-setting"&gt;MySQL setting&lt;/h3&gt;
+&lt;p&gt;CSV files were directly loaded into MySQL database and corresponding indices were created.
+MySQL was set up on a desktop with 64Gb of RAM. Ingestion took approximately 35 minutes.&lt;/p&gt;
+&lt;h3 id="arangodb-setting"&gt;ArangoDB setting&lt;/h3&gt;
+&lt;p&gt;We used ArangoDB version 3.4, hosted on an Ubuntu 16.04 with 16Gb of ram.
+For arangodb each type of csv file (blue) was projected on one or more vertex collections (green). From the point of view of a graph database each encodes not only a node in a vertex collection (potentially non-unique), but also an edge (hopefully unique). The inherent difficulty is to create edges between correct vertices. For that we decide which fields are going to uniquely describe a document from a vertex collection. The ingestion process took approximately 12 hours. While for the SQL test ingestion the tables were simply loaded into a MySQL database, for the graph database we upserted the vertices, i.e. for each vertex &lt;em&gt;upsert&lt;/em&gt; we had to check if a vertex with the same index fields exists in the collection and retrieve its &lt;em&gt;id&lt;/em&gt; if it did.&lt;/p&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="d-flex justify-content-center"&gt;
+&lt;div class="w-100" &gt;&lt;img src="./figs/wos_csv_source2vc.png" alt="source2vc" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;One of the crucial steps is to define the mappings of table columns onto field of vertex collection.
+Vertex collections contained the following fields (purple, with indices in boxed fields).&lt;/p&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="d-flex justify-content-center"&gt;
+&lt;div class="w-100" &gt;&lt;img src="./figs/wos_csv_vc2fields.png" alt="source2vc" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;In order to insert edge instances, we first created edge collections as collections between vertex collections. Each document in an edge collection must contai two fields &lt;em&gt;_to&lt;/em&gt; and &lt;em&gt;_from&lt;/em&gt;, with corresponding values being the ids of the source and the target vertices.&lt;/p&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="d-flex justify-content-center"&gt;
+&lt;div class="w-100" &gt;&lt;img src="./figs/wos_csv_vc2vc.png" alt="source2vc" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Please note the edge connecting &lt;em&gt;publication&lt;/em&gt; collection to itself, representing citations: both &lt;em&gt;wos_id&lt;/em&gt; and &lt;em&gt;uid&lt;/em&gt; have to be mapped to the same &lt;em&gt;id&lt;/em&gt; of the publication collection.&lt;/p&gt;
+&lt;p&gt;Our ingestion pipeline used &lt;code&gt;pyarango&lt;/code&gt; package and arango query language &lt;code&gt;aql&lt;/code&gt;.
+&lt;code&gt;pyarango&lt;/code&gt; provides an interfaces to a limited number of functions to manage ArangoDB, so certain steps were executed as &lt;code&gt;aql&lt;/code&gt; queries.&lt;/p&gt;
+&lt;p&gt;De-duplication of existing documents (documents are considered identical if defining fields, which were also indexed upon, are the same, grey boxes in the figure above) was part of the ingestion process (see upsert).
+The ingestion process took approximately 12 hours, of which citation ingestion took about 8.&lt;/p&gt;
+&lt;h3 id="queries"&gt;Queries&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Calculate number of publications per journal for 1978 and return in descending order.&lt;/li&gt;
+&lt;li&gt;Return 1000 most popular words (minus stop words) from all available titles.&lt;/li&gt;
+&lt;li&gt;Find authors who changed their country more than twice.&lt;/li&gt;
+&lt;li&gt;For a given publication &lt;em&gt;p&lt;/em&gt; compute the ratio &lt;em&gt;z&lt;/em&gt; of number of second order neighbors to first order neighbors in the directed network of citations.&lt;/li&gt;
+&lt;li&gt;Count the number of times publications from journal &lt;em&gt;j&lt;/em&gt; published in 1978 cite publications in journal &lt;em&gt;j’&lt;/em&gt; published in the previous 5 years.&lt;/li&gt;
+&lt;li&gt;Given a subset of publications, compute the cardinality of the power set defined as papers cited by &lt;em&gt;p&lt;/em&gt;, papers that are cited by papers cited by &lt;em&gt;p&lt;/em&gt; and so on of order 5. Take the top 100 publications from Q4 with the highest ratio &lt;em&gt;z&lt;/em&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Below we plot query times in seconds as a function of the size of the restricting subset, where applicable. Red, solid lines correspond to ArangoDB, blue, dashed lines and star markers - to MySQL.&lt;/p&gt;
+&lt;p&gt;
+&lt;figure &gt;
+&lt;div class="d-flex justify-content-center"&gt;
+&lt;div class="w-100" &gt;&lt;img src="./figs/queries_plot_times.png" alt="source2vc" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;For Q1, the limit is on the number of journals.&lt;/p&gt;
+&lt;p&gt;For Q2 - on the number of publications.&lt;/p&gt;
+&lt;p&gt;For Q3 - on the number of contributors.&lt;/p&gt;
+&lt;p&gt;For Q4 - on the number of publications.&lt;/p&gt;
+&lt;p&gt;For Q5 - on both the number of journals which are citing and which are being cited, so the for limit size N, the result is an NxN matrix. We note that Q5 essentially represents Eigenfactor [3] computation.&lt;/p&gt;
+&lt;p&gt;For Q6 - on the number of source publications.&lt;/p&gt;
+&lt;p&gt;Arango queries can be found &lt;a href="https://github.com/alexander-belikov/wos_db_studies/blob/master/run/queries.py" target="_blank" rel="noopener"&gt;wos_db_studies/run/queries&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;SQL queries can be found
+&lt;a href="https://github.com/brendanchambers/wos_db_benchmark/tree/master/benchmarking" target="_blank" rel="noopener"&gt;wos_db_benchmark/benchmarking&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;While our MySQL is less complete than that of ArangoDB (the results from Q2-Q4 were close to identical), where applicable the comparison reveals that MySQL shines where expected - in linear queries, such as looping over titles and does not do so well in graph-oriented tasks. Notably the results from ArangoDB for queries 3 and 4 surpass MySQL results by almost two orders of magnitude (!).&lt;/p&gt;
+&lt;h3 id="conclusion"&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;The choice of schemas, the details of index definitions and computer hardware all contribute to the uncertainty of our results.&lt;br&gt;
+Nonetheless, we are able to conclude that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ArangoDB is a robust and well-supported database with excellent documentation (however, the learning curve might be steep compared to MySQL)&lt;/li&gt;
+&lt;li&gt;Ingestion time for ArangoDB is greater than that for the MySQL counterpart&lt;/li&gt;
+&lt;li&gt;ArangoDB beats MySQL on graph-oriented queries&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;AQL&lt;/em&gt; is expressive with respect to graph-specific queries&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="references"&gt;References&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://www.arangodb.com/" target="_blank" rel="noopener"&gt;https://www.arangodb.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Web_of_Science" target="_blank" rel="noopener"&gt;https://en.wikipedia.org/wiki/Web_of_Science&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.knowledgelab.org/" target="_blank" rel="noopener"&gt;https://www.knowledgelab.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.eigenfactor.org/" target="_blank" rel="noopener"&gt;http://www.eigenfactor.org/&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="acknowledgements"&gt;Acknowledgements&lt;/h3&gt;
+&lt;p&gt;Prepared with the help of Brendan Chambers.&lt;/p&gt;</description></item><item><title>ArangoDB : case for graphs</title><link>https://alexander-belikov.github.io/event/arangodb-case-for-graphs/</link><pubDate>Thu, 20 May 2021 17:00:00 +0000</pubDate><guid>https://alexander-belikov.github.io/event/arangodb-case-for-graphs/</guid><description/></item><item><title>Bayesian model of electrical heating disaggregation</title><link>https://alexander-belikov.github.io/publication/2020-hw-heating/</link><pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate><guid>https://alexander-belikov.github.io/publication/2020-hw-heating/</guid><description>&lt;h1 id="supplementary-notes-can-be-added-here-including-code-math-and-images"&gt;Supplementary notes can be added here, including &lt;a href="https://wowchemy.com/docs/writing-markdown-latex/" target="_blank" rel="noopener"&gt;code, math, and images&lt;/a&gt;.&lt;/h1&gt;</description></item><item><title>Creating training data for scientific named entity recognition with minimal human effort</title><link>https://alexander-belikov.github.io/publication/2019-creating/</link><pubDate>Fri, 07 Jun 2019 22:42:21 +0100</pubDate><guid>https://alexander-belikov.github.io/publication/2019-creating/</guid><description/></item><item><title>Slides</title><link>https://alexander-belikov.github.io/slides/example/</link><pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate><guid>https://alexander-belikov.github.io/slides/example/</guid><description>&lt;h1 id="create-slides-in-markdown-with-wowchemy"&gt;Create slides in Markdown with Wowchemy&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://wowchemy.com/" target="_blank" rel="noopener"&gt;Wowchemy&lt;/a&gt; | &lt;a href="https://wowchemy.com/docs/content/slides/" target="_blank" rel="noopener"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="features"&gt;Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Efficiently write slides in Markdown&lt;/li&gt;
+&lt;li&gt;3-in-1: Create, Present, and Publish your slides&lt;/li&gt;
+&lt;li&gt;Supports speaker notes&lt;/li&gt;
+&lt;li&gt;Mobile friendly slides&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="controls"&gt;Controls&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Next: &lt;code&gt;Right Arrow&lt;/code&gt; or &lt;code&gt;Space&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Previous: &lt;code&gt;Left Arrow&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Start: &lt;code&gt;Home&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Finish: &lt;code&gt;End&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Overview: &lt;code&gt;Esc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Speaker notes: &lt;code&gt;S&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Fullscreen: &lt;code&gt;F&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Zoom: &lt;code&gt;Alt + Click&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://revealjs.com/pdf-export/" target="_blank" rel="noopener"&gt;PDF Export&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="code-highlighting"&gt;Code Highlighting&lt;/h2&gt;
+&lt;p&gt;Inline code: &lt;code&gt;variable&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Code block:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;porridge&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;blueberry&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;porridge&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;blueberry&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Eating...&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="math"&gt;Math&lt;/h2&gt;
+&lt;p&gt;In-line math: $x + y = z$&lt;/p&gt;
+&lt;p&gt;Block math:&lt;/p&gt;
+&lt;p&gt;$$
 f\left( x \right) = ;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}
-$$&lt;/p>
-&lt;hr>
-&lt;h2 id="fragments">Fragments&lt;/h2>
-&lt;p>Make content appear incrementally&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">{{% fragment %}} One {{% /fragment %}}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{% fragment %}} **Two** {{% /fragment %}}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{% fragment %}} Three {{% /fragment %}}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Press &lt;code>Space&lt;/code> to play!&lt;/p>
-&lt;span class="fragment " >
+$$&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="fragments"&gt;Fragments&lt;/h2&gt;
+&lt;p&gt;Make content appear incrementally&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;{{% fragment %}} One {{% /fragment %}}
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;{{% fragment %}} **Two** {{% /fragment %}}
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;{{% fragment %}} Three {{% /fragment %}}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Press &lt;code&gt;Space&lt;/code&gt; to play!&lt;/p&gt;
+&lt;span class="fragment " &gt;
 One
-&lt;/span>
-&lt;span class="fragment " >
-&lt;strong>Two&lt;/strong>
-&lt;/span>
-&lt;span class="fragment " >
+&lt;/span&gt;
+&lt;span class="fragment " &gt;
+&lt;strong&gt;Two&lt;/strong&gt;
+&lt;/span&gt;
+&lt;span class="fragment " &gt;
 Three
-&lt;/span>
-&lt;hr>
-&lt;p>A fragment can accept two optional parameters:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>class&lt;/code>: use a custom style (requires definition in custom CSS)&lt;/li>
-&lt;li>&lt;code>weight&lt;/code>: sets the order in which a fragment appears&lt;/li>
-&lt;/ul>
-&lt;hr>
-&lt;h2 id="speaker-notes">Speaker Notes&lt;/h2>
-&lt;p>Add speaker notes to your presentation&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">{{% speaker_note %}}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> Only the speaker can read these notes
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> Press &lt;span class="sb">`S`&lt;/span> key to view
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{% /speaker_note %}}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Press the &lt;code>S&lt;/code> key to view the speaker notes!&lt;/p>
-&lt;aside class="notes">
-&lt;ul>
-&lt;li>Only the speaker can read these notes&lt;/li>
-&lt;li>Press &lt;code>S&lt;/code> key to view&lt;/li>
-&lt;/ul>
-&lt;/aside>
-&lt;hr>
-&lt;h2 id="themes">Themes&lt;/h2>
-&lt;ul>
-&lt;li>black: Black background, white text, blue links (default)&lt;/li>
-&lt;li>white: White background, black text, blue links&lt;/li>
-&lt;li>league: Gray background, white text, blue links&lt;/li>
-&lt;li>beige: Beige background, dark text, brown links&lt;/li>
-&lt;li>sky: Blue background, thin dark text, blue links&lt;/li>
-&lt;/ul>
-&lt;hr>
-&lt;ul>
-&lt;li>night: Black background, thick white text, orange links&lt;/li>
-&lt;li>serif: Cappuccino background, gray text, brown links&lt;/li>
-&lt;li>simple: White background, black text, blue links&lt;/li>
-&lt;li>solarized: Cream-colored background, dark green text, blue links&lt;/li>
-&lt;/ul>
-&lt;hr>
+&lt;/span&gt;
+&lt;hr&gt;
+&lt;p&gt;A fragment can accept two optional parameters:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;class&lt;/code&gt;: use a custom style (requires definition in custom CSS)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;weight&lt;/code&gt;: sets the order in which a fragment appears&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="speaker-notes"&gt;Speaker Notes&lt;/h2&gt;
+&lt;p&gt;Add speaker notes to your presentation&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-markdown" data-lang="markdown"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;{{% speaker_note %}}
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; Only the speaker can read these notes
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;-&lt;/span&gt; Press &lt;span class="sb"&gt;`S`&lt;/span&gt; key to view
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; {{% /speaker_note %}}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Press the &lt;code&gt;S&lt;/code&gt; key to view the speaker notes!&lt;/p&gt;
+&lt;aside class="notes"&gt;
+&lt;ul&gt;
+&lt;li&gt;Only the speaker can read these notes&lt;/li&gt;
+&lt;li&gt;Press &lt;code&gt;S&lt;/code&gt; key to view&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/aside&gt;
+&lt;hr&gt;
+&lt;h2 id="themes"&gt;Themes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;black: Black background, white text, blue links (default)&lt;/li&gt;
+&lt;li&gt;white: White background, black text, blue links&lt;/li&gt;
+&lt;li&gt;league: Gray background, white text, blue links&lt;/li&gt;
+&lt;li&gt;beige: Beige background, dark text, brown links&lt;/li&gt;
+&lt;li&gt;sky: Blue background, thin dark text, blue links&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;night: Black background, thick white text, orange links&lt;/li&gt;
+&lt;li&gt;serif: Cappuccino background, gray text, brown links&lt;/li&gt;
+&lt;li&gt;simple: White background, black text, blue links&lt;/li&gt;
+&lt;li&gt;solarized: Cream-colored background, dark green text, blue links&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
 &lt;section data-noprocess data-shortcode-slide
 data-background-image="/media/boards.jpg"
->
-&lt;h2 id="custom-slide">Custom Slide&lt;/h2>
-&lt;p>Customize the slide style and background&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">slide&lt;/span> &lt;span class="na">background-image&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;/media/boards.jpg&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">slide&lt;/span> &lt;span class="na">background-color&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="ni">#0000FF&lt;/span>&lt;span class="s">&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">slide&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;my-style&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
-&lt;h2 id="custom-css-example">Custom CSS Example&lt;/h2>
-&lt;p>Let&amp;rsquo;s make headers navy colored.&lt;/p>
-&lt;p>Create &lt;code>assets/css/reveal_custom.css&lt;/code> with:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">reveal&lt;/span> &lt;span class="nt">section&lt;/span> &lt;span class="nt">h1&lt;/span>&lt;span class="o">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">reveal&lt;/span> &lt;span class="nt">section&lt;/span> &lt;span class="nt">h2&lt;/span>&lt;span class="o">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">reveal&lt;/span> &lt;span class="nt">section&lt;/span> &lt;span class="nt">h3&lt;/span> &lt;span class="p">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">navy&lt;/span>&lt;span class="p">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;hr>
-&lt;h1 id="questions">Questions?&lt;/h1>
-&lt;p>&lt;a href="https://discord.gg/z8wNYzb" target="_blank" rel="noopener">Ask&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://wowchemy.com/docs/content/slides/" target="_blank" rel="noopener">Documentation&lt;/a>&lt;/p></description></item><item><title>Example Project</title><link>https://alexander-belikov.github.io/project/example/</link><pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate><guid>https://alexander-belikov.github.io/project/example/</guid><description>&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p>
-&lt;p>Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p>
-&lt;p>Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p>
-&lt;p>Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p>
-&lt;p>Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p></description></item><item><title>External Project</title><link>https://alexander-belikov.github.io/project/external-project/</link><pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate><guid>https://alexander-belikov.github.io/project/external-project/</guid><description/></item><item><title>Admin</title><link>https://alexander-belikov.github.io/admin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alexander-belikov.github.io/admin/</guid><description/></item></channel></rss>
+&gt;
+&lt;h2 id="custom-slide"&gt;Custom Slide&lt;/h2&gt;
+&lt;p&gt;Customize the slide style and background&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-markdown" data-lang="markdown"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;{{&amp;lt; slide background-image=&amp;#34;/media/boards.jpg&amp;#34; &amp;gt;}}
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;{{&amp;lt; slide background-color=&amp;#34;&lt;span class="ni"&gt;#0000FF&lt;/span&gt;&amp;#34; &amp;gt;}}
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;{{&amp;lt; slide class=&amp;#34;my-style&amp;#34; &amp;gt;}}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="custom-css-example"&gt;Custom CSS Example&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s make headers navy colored.&lt;/p&gt;
+&lt;p&gt;Create &lt;code&gt;assets/css/reveal_custom.css&lt;/code&gt; with:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-css" data-lang="css"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;reveal&lt;/span&gt; &lt;span class="nt"&gt;section&lt;/span&gt; &lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;reveal&lt;/span&gt; &lt;span class="nt"&gt;section&lt;/span&gt; &lt;span class="nt"&gt;h2&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nc"&gt;reveal&lt;/span&gt; &lt;span class="nt"&gt;section&lt;/span&gt; &lt;span class="nt"&gt;h3&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;navy&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h1 id="questions"&gt;Questions?&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://discord.gg/z8wNYzb" target="_blank" rel="noopener"&gt;Ask&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://wowchemy.com/docs/content/slides/" target="_blank" rel="noopener"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Example Project</title><link>https://alexander-belikov.github.io/project/example/</link><pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate><guid>https://alexander-belikov.github.io/project/example/</guid><description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;</description></item><item><title>External Project</title><link>https://alexander-belikov.github.io/project/external-project/</link><pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate><guid>https://alexander-belikov.github.io/project/external-project/</guid><description/></item><item><title>Admin</title><link>https://alexander-belikov.github.io/admin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://alexander-belikov.github.io/admin/</guid><description/></item></channel></rss>
